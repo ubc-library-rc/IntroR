@@ -4,25 +4,34 @@ title: Outline
 nav_order: 1
 ---
 
-## Note: this workshop is in development and not yet complete.
+R is popular for many applications including data visualization and statistical analysis. This beginner orientation is suitable for people with little or no R experience. It will help you decide whether R is the right tool for your data analysis needs and introduce R terminology using the RStudio interface.  
+See the UBC library Research Commons [event calendar](https://researchcommons.library.ubc.ca/events/) for related workshops on medium and advanced topics.
 
-Description...
+Participants are expected to have installed the latest versions of R and RStudio on their computers before the workshop:  
+Install R from [https://cran.rstudio.com/](https://cran.rstudio.com/)   
+Install RStudio from [https://rstudio.com/products/rstudio/download/#download](https://rstudio.com/products/rstudio/download/#download)  
+{: .prereq}
 
 ## Learning objectives
 
 At the end of this workshop, you will be able to:
-1.
-2.
-3.
+1. Understand what R is used for and its pros and cons compared to alternatives.
+2. Know how to use RStudio including the console, source editor, environment, and help pane.
+3. Grasp basic concepts and syntax used in R, such as operator, function, package, data type and structure.
 
 ## Schedule
 
-| 0:00 | Welcome and using Zoom|
-| 0:05 | Introduction |  
-| 0:15 |  |
-| 0:30 |  |   
-| 0:45 |  |
-| 1:00 | Wrap-up and Discussion |
+| 0:00 - 0:05 | Welcome and using Zoom|
+| 0:05 - 0:20 | Intro to R |  
+| 0:20 - 0:35 | Intro to RStudio |
+| 0:35 - 0:55 | Basic Concepts and Syntax |   
+| 0:55 - 1:00 | Recap |
+| 1:00 - 1:30 | Optional Q&A |
 
 ## Resources
-* [eg. link to external slides]
+Recommended Books:
+* [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+* [R for Epidemiology](https://www.r4epi.com/)
+* [R for Data Science (2e)](https://r4ds.hadley.nz/)
+* [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html)
+
