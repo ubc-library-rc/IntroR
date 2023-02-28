@@ -57,7 +57,7 @@ a < c <br>
 ## 2. Functions and Packages
 
 ### Function
-When we calculate the sum of all the integers from 1 to 100, we use a formula to help simplify the calculation. What if we can not memorize the formula? Does it mean that we have to sum those integers brute force by typing 1 + 2 + 3 + ... all the way up to 100? We can use a built-in function `sum()` with the colon operator `:`.   
+When we calculate the sum of all the integers from 1 to 100, we use a formula to help simplify the calculation. What if we cannot memorize the formula? Does it mean that we have to sum those integers brute force by typing 1 + 2 + 3 + ... all the way up to 100? We can use a built-in function `sum()` with the colon operator `:`.   
 
 Input
 {: .label .label-green}
@@ -65,7 +65,7 @@ Input
 sum(1:100)
 ```
 
-In R, a **function** is a block of code that performs a specific task and can be called or executed by the user. Functions are an essential part of R programming because they allow you to automate tasks and reuse code.  
+In R, a **function** is a block of code that performs a specific task and can be called or executed by the user. Functions are an essential part of R programming because they allow you to automate tasks and reuse code. As a R user, you can rely on functions heavily. 
 
 When R is installed, it comes with a default package named `base`, which contains some **built-in functions** that you can use. For example,    
 `mean()`: Calculates the arithmetic mean of a vector of numbers,  
@@ -77,7 +77,7 @@ When R is installed, it comes with a default package named `base`, which contain
 ### Package
 As introduced earlier, R is powerful partially because it is extensible by installing additional packages quickly. In R, a **package** is a collection of functions, data, and documentation. 
 
-Packages can be installed using the `install.packages()` function, which downloads the package from a repository and installs it on your system. Once a package is installed, its functions and data can be loaded into the R environment using the `library()` function. Once the package is installed, you do not need to install it again, but you do need to library it again in order to use the function from the packaage every time when you restart the RStudio. If you want use a function from a package without library it, you can use the double colon operator, for example, `dplyr::filter()`, where `dplyr` is the package name, and `filter()` is a function from the package.
+Packages can be installed using the `install.packages()` function, which downloads the package from a repository and installs it on your system. Once a package is installed, its functions and data can be loaded into the R environment using the `library()` function. You do not need to install a package repeatedly, but you do need to library it again in order to use it every time when you restart the RStudio. If you want to use a function from a package without library it, you can use the double colon operator, for example, `dplyr::filter()`, where `dplyr` is the package name, and `filter()` is a function from the package.
 
 ### Practice 2
 The `tidyverse` is a collection of popular R packages for data manipulation and visualization. Use the following commands to install and load the `tidyverse` package:  
@@ -145,8 +145,7 @@ iris[2, 4]
 You can import **foreign data** into R as well. The beginners-friendly way is to import through the Import Dataset button under Environment on the top right pane.
 
 ### Practice 3
-The following screenshot shows how to import the 2016 and 2021 Censuses data of Canada about judges by race and gender from the Abacus [https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/PG2NB4](https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/PG2NB4). Try follow the steps to import the data into your RStudio.
-
+The following screenshot shows how to download and import the 2016 and 2021 Census data about the race and gender of judges in Canada [https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/PG2NB4](https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/PG2NB4). The dataset is retrieved from [Abacus](https://abacus.library.ubc.ca/). Try follow the steps to import the data into your RStudio.
 
 <p align="center">
 <img src="images/Download.png" width="800" />  
@@ -186,7 +185,7 @@ X104526_gbrecs_true <- read_csv("https://abacus.library.ubc.ca/api/access/datafi
 View(X104526_gbrecs_true)
 ```
 
-Using these code, others can easily import the target data in the URL, much easier than following the series of screenshots in practice 3. Such a nuance could also contribute to research reproducibility. Let's paste these code to a script and save it for future use.
+Using these code, others can easily import the target data in the URL, much easier than following the series of screenshots in practice 3. Such a nuance could also contribute to research transparency and reproducibility. Let's paste these code to a script and save it for future use.
 
 <p align="center">
 <img src="images/save_script.png" width="800" />  
