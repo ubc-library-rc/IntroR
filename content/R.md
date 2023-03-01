@@ -16,14 +16,14 @@ R vs other statistical software such as SPSS, SAS, STATA, Mplus, HLM etc. :
 
 ### Pros
 * <b>Accessibility</b>: R is free and open-source, while other statistical software like SPSS is proprietary software that requires expensive licenses.  <br>
-* <b>Extensibility</b>: R has tons of packages available for users to download and use in their analysis. A lot of developers actively maintain their packages and many develop new packages for noval state-of-art analysis.  <br>
+* <b>Extensibility</b>: R has tons of packages available for users to download and use in their analysis. A lot of developers actively maintain their packages and many develop new packages for novel state-of-the-art analysis.  <br>
 (Optional: [Table of available packages in CRAN, sorted by date of publication](https://cran.r-project.org/web/packages/available_packages_by_date.html))  <br>
 * <b>Flexibility</b>: R is highly customizable. You can customize plots, functions or even develop packages for your own needs.  <br>
 (Optional: [An interesting metaphor](https://rstudio-education.github.io/hopr/preface.html#:~:text=Busses%20are%20very,SPSS.%20%2D%20Greg%20Snow))  <br>
 * <b>Reproducibility</b>: R code for data manipulation and analysis can be written and saved in scripts, which can be run anytime to reproduce the results given the raw data and scripts.  <br>
 (Optional: [A reproducible example](https://journal.r-project.org/articles/RJ-2022-021/#example-gb-rainfall-paper)  
 [CRAN Task View: Reproducible Research](https://cran.r-project.org/web/views/ReproducibleResearch.html))  <br>
-* <b>Popularity</b>: R has a larger and more active user community, which provides a wealth of resources and support.  <br>
+* <b>Popularity</b>: R has a larger and active user community, which provides a wealth of resources and support.  <br>
 (Optional: [Getting Help with R](https://support.posit.co/hc/en-us/articles/200552336-Getting-Help-with-R))  <br>
 
 

@@ -11,30 +11,32 @@ has_toc: false
 ## 1. Operators
 
 In R, an operator is a special symbol or keyword used to perform operations on one or more values. There are several types of operators in R, including:
+
+{: .list-with-space}
 * **Assignment Operators**: These operators are used to assign a value to a variable.   
 Examples include `<-` and `=`.
 * **Arithmetic Operators**: These operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, and division. Examples include   
-`+` for addition,   
-`-` for subtraction,   
-`*` for multiplication,   
-`/` for division,   
-and `^` for power.
+	- `+` for addition,   
+	- `-` for subtraction,   
+	- `*` for multiplication,   
+	- `/` for division,   
+	- and `^` for power.
 * **Comparison Operators**: These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include   
-`<` for less than,   
-`>` for greater than,   
-`==` for equal to,   
-and `!=` for not equal to.
+	- `<` for less than,   
+	- `>` for greater than,   
+	- `==` for equal to,   
+	- and `!=` for not equal to.
 * **Logical Operators**: These operators are used to perform logical operations on values or variables, and return a logical value of TRUE or FALSE. Examples include   
-`&` for logical AND,   
-`|` for logical OR,   
-and `!` for logical NOT.
+  * `&` for logical AND,   
+  * `|` for logical OR,   
+  * and `!` for logical NOT.
 * **Miscellaneous Operators**: These include  
-the hash sign `#` which indicate a comment in the code,   
-the colon sign `:` which creates a sequence of numbers,  
-the square bracket `[]` which indexs a object such as a vector,  
-the dollar sign `$` wchi accesses a variable from a data frame,    
-the percent sign `%` which is used for special operators like modulo,     
-and the double colon `::` used for accessing functions or variables from a specific package.    
+  * the hash sign `#` indicates a comment in the code,   
+  * the colon sign `:` creates a sequence of numbers,  
+  * the square bracket `[]` indexes an object such as a vector,  
+  * the dollar sign `$` accesses a variable from a data frame,    
+  * the percent sign `%` is used for special operators like modulo,     
+  * and the double colon `::` used to access functions or variables from a specific package.    
   
 Understanding how to use these different types of operators is important for writing efficient and effective code in R.
 
@@ -68,11 +70,12 @@ sum(1:100)
 In R, a **function** is a block of code that performs a specific task and can be called or executed by the user. Functions are an essential part of R programming because they allow you to automate tasks and reuse code. As a R user, you can rely on functions heavily. 
 
 When R is installed, it comes with a default package named `base`, which contains some **built-in functions** that you can use. For example,    
-`mean()`: Calculates the arithmetic mean of a vector of numbers,  
-`sd()`: Calculates the standard deviation of a vector of numbers,   
-`str()`: Displays the structure of an R object,  
-`table()`: Creates a frequency table of a vector or factor,  
-`plot()`: Creates a basic plot of data.  
+
+| `mean()` | Calculates the arithmetic mean of a vector of numbers  
+| `sd()` | Calculates the standard deviation of a vector of numbers   
+| `str()` | Displays the structure of an R object  
+| `table()` | Creates a frequency table of a vector or factor  
+| `plot()` | Creates a basic plot of data
 
 ### Package
 As introduced earlier, R is powerful partially because it is extensible by installing additional packages quickly. In R, a **package** is a collection of functions, data, and documentation. 
@@ -103,7 +106,7 @@ The `typeof()` function can help check for the data type of a object. For exampl
 Input
 {: .label .label-green}
 ```r
-typeof(a); typeof(b); typeof(c) # check for data type, the semicolon ";" separate multiple statements on the same line of code
+typeof(a); typeof(b); typeof(c) # check for data type, the semicolon ";" separates multiple statements on the same line of code
 ```
 
 Each data type has its own properties and functions that can be used to manipulate and analyze data. Data type is an important concept in R because it affects how the data is stored, processed, and analyzed. Choosing the appropriate data type can help you optimize your memory usage, perform the necessary data manipulations, conduct the appropriate statistical analyses, and create effective visualizations of your data.  
@@ -118,22 +121,23 @@ Input
 d <- c(a, b, c) # create a vector
 ```
 
-To access an element in a vector, you can use the operater `[]` and a number inside it indicating the position of the element. For example, to access the second element in `d`, the syntax is `d[2]`.
+To access an element in a vector, you can use the operator `[]` and a number inside it indicating the position of the element. For example, to access the second element in `d`, the syntax is `d[2]`.
 
 ### Data Frame
 
-A **data frame** is a two-dimensional tabular data structure that represents a rectangular grid of data, where each row represents an observation and each column represents a variable. Essentially, a data frame is several equal-length vectors - one for each column. The data in each column must be of the same type, while the data in each row can be different type.
+A **data frame** is a two-dimensional tabular data structure that represents a rectangular grid of data, where each row represents an observation and each column represents a variable. Essentially, a data frame is several equal-length vectors - one for each column. The data in each column must be of the same type, while the data in each row can be different types.
 
 R comes with several **built-in data frames**. These data sets can be useful for learning and practicing data manipulation, analysis, and visualization techniques. To name a few,    
-`iris`: A data frame containing measurements of the length and width of petals and sepals for three species of iris flowers (setosa, versicolor, and virginica).  
-`mtcars`: A data frame containing information about 32 automobiles, including miles per gallon (mpg), horsepower (hp), and other variables related to performance and design.   
-`airquality`: A data frame containing daily measurements of air quality in New York City in the summer of 1973, including measurements of ozone, particulate matter, and other pollutants.  
-`ChickWeight`: A data frame containing information on the weight of chickens over time, along with details on diet, gender, and other factors that may impact growth.  
-`CO2`: A data frame containing measurements of carbon dioxide uptake in plants, along with information on factors such as light intensity, temperature, and humidity.  
+
+| `iris` | A data frame containing measurements of the length and width of petals and sepals for three species of iris flowers (setosa, versicolor, and virginica).  
+| `mtcars` | A data frame containing information about 32 automobiles, including miles per gallon (mpg), horsepower (hp), and other variables related to performance and design.   
+| `airquality` | A data frame containing daily measurements of air quality in New York City in the summer of 1973, including measurements of ozone, particulate matter, and other pollutants.  
+| `ChickWeight` | A data frame containing information on the weight of chickens over time, along with details on diet, gender, and other factors that may impact growth.  
+| `CO2` | A data frame containing measurements of carbon dioxide uptake in plants, along with information on factors such as light intensity, temperature, and humidity.  
 
 These data sets can be accessed by name in R and can be loaded into memory using the `data()` function. For example, to load the `iris` data frame into memory, you can use `data(iris)`. 
 
-To access an element in a data frame, you can use the operater `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and forth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame by `$` operator, for example, `iris$Sepal.Length` call out the `Sepal.Length` variable from `iris` dataset.
+To access an element in a data frame, you can use the operator `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and fourth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame with the `$` operator, for example, `iris$Sepal.Length` calls out the `Sepal.Length` variable from `iris` dataset.
 
 Input
 {: .label .label-green}
@@ -149,28 +153,23 @@ The following screenshot shows how to download and import the 2016 and 2021 Cens
 
 <p align="center">
 <img src="images/Download.png" width="800" />  
-</p>
-*Figure 4. Download Data from Abacus*  
+<em>Figure 4. Download Data from Abacus</em></p>  
 
 <p align="center">
 <img src="images/Copy_URL.png" width="800" />  
-</p>
-*Figure 5. Find the Downloaded File and Copy Download Link*  
+<em>Figure 5. Find the Downloaded File and Copy Download Link</em></p>  
 
 <p align="center">
 <img src="images/import.png" width="800" />  
-</p>
-*Figure 6. Import Dataset through Environment*   
+<em>Figure 6. Import Dataset through Environment</em></p>   
  
 <p align="center">
 <img src="images/after_update.png" width="800" />  
-</p>
-*Figure 7. Import Dataset Option 1 Paste URL*  
+<em>Figure 7. Import Dataset Option 1 Paste URL</em></p>  
 
 <p align="center">
 <img src="images/Browse1.png" width="800" />  
-</p>
-*Figure 8. Import Dataset Option 2 Browse File*  
+<em>Figure 8. Import Dataset Option 2 Browse File</em></p>  
 
 
 ## 4. Working Directory
@@ -189,15 +188,13 @@ Using these code, others can easily import the target data in the URL, much easi
 
 <p align="center">
 <img src="images/save_script.png" width="800" />  
-</p>
-*Figure 9. Save a Script*  
+<em>Figure 9. Save a Script</em></p>  
 
 When you click the save button, a pop-out window will ask you to specify where to save the script. If we have several files to save, such as plots and datasets, we can avoid them from popping out repeatedly by setting the working directory. **Working directory** is a file path on your computer that sets the default location of any files you read into R, or save out of R. To set the working directory, you can go to the toolbar or use code.
 
 <p align="center">
 <img src="images/setwd.png" width="800" />  
-</p>
-*Figure 10. Set Working Directory*  
+<em>Figure 10. Set Working Directory</em></p>  
 
 Input
 {: .label .label-green}
