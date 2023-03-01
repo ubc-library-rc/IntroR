@@ -40,7 +40,7 @@ R vs other statistical software such as SPSS, SAS, STATA, Mplus, HLM etc. :
 
 ## 2. A programming language for statistical computing and graphics
 
-R is a specialized language designed for statistical computing and graphics. It is not a general-purpose programming language for software and web development. However, Python, a general-purpose programming language, is popular for data analysis and shares some of R's features like open source and a strong community. It can be a hard call if you want to choose only one. Each of them have certain strengths:
+R is a specialized language designed for statistical computing and graphics. It is NOT a general-purpose programming language for software and web development. However, Python, a general-purpose programming language, is popular for data analysis, and shares some of R's features like open source and a strong community. It can be a hard call if you want to choose only one. Each of them have certain strengths:
 
 <p align="center">
 <img src="images/RvsPython.png" width="800" />  

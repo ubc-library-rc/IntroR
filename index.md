@@ -4,8 +4,10 @@ title: Outline
 nav_order: 1
 ---
 
+# Welcome to Intro to R and RStudio (beginner)
+
 R is popular for many applications including data visualization and statistical analysis. This beginner orientation is suitable for people with little or no R experience. It will help you decide whether R is the right tool for your data analysis needs and introduce R terminology using the RStudio interface.  
-See the UBC library Research Commons [event calendar](https://researchcommons.library.ubc.ca/events/) for related workshops on medium and advanced topics.
+See the UBC library Research Commons [event calendar](https://researchcommons.library.ubc.ca/events/) for related workshops on intermediate and advanced topics.
 
 Participants are expected to have installed the latest versions of R and RStudio on their computers before the workshop:  
 Install R from [https://cran.rstudio.com/](https://cran.rstudio.com/)   

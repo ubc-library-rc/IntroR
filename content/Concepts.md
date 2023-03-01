@@ -21,15 +21,15 @@ Examples include `<-` and `=`.
 	- `*` for multiplication,   
 	- `/` for division,   
 	- and `^` for power.
+* **Logical Operators**: These operators are used to perform logical operations on values or variables, and return a logical value of TRUE or FALSE. Examples include   
+    - `&` for logical AND,   
+    - `|` for logical OR,   
+    - and `!` for logical NOT.  
 * **Comparison Operators**: These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include   
 	- `<` for less than,   
 	- `>` for greater than,   
 	- `==` for equal to,   
 	- and `!=` for not equal to.
-* **Logical Operators**: These operators are used to perform logical operations on values or variables, and return a logical value of TRUE or FALSE. Examples include   
-  * `&` for logical AND,   
-  * `|` for logical OR,   
-  * and `!` for logical NOT.
 * **Miscellaneous Operators**: These include  
   * the hash sign `#` indicates a comment in the code,   
   * the colon sign `:` creates a sequence of numbers,  
