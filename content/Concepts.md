@@ -92,6 +92,23 @@ install.packages("tidyverse") # Install package
 library(tidyverse) # Load package
 ```
 
+<details>
+<summary><u>Click here for outputs</u></summary>
+<div style="border: thin grey 1px; background-color: #eeebee; padding:15px;">
+<p><strong>Output 1:</strong> </p>
+<img style="margin-left:1px; margin-bottom:10px" src="images/install_package.png" />
+<p>It is likely to get <b>some message in red</b> in the output when you install a package. As long as it says the package is successfully unpacked, you can ignore those message. Go ahead to the next step - load the package. </p>
+<p><strong>Output 2:</strong> </p>
+<img style="margin-left:1px; margin-bottom:10px" src="images/load_package.png" />
+<p>If you got the same output in the console or find the box for the package checked under the package tab on the bottom right pane, you have successfully loaded the package. The <b>conflits</b> messages in the output indicate that some functions from different packages have the same name. The functions from the currently loaded package will be used as default if you do not specify the package from which the function should be used.</p>
+<img style="margin-left:1px; margin-bottom:10px" src="images/load_package2.png" />
+<p>However, if you get the output that says there is no such package, your installation step has unresolved issues. Try update your R and RStudio to the latest version and install again.</p>
+<img style="margin-left:1px; margin-bottom:10px" src="images/load_package3.png" />
+</div>
+</details>
+
+
+
 ## 3. Data Type, Vector, and Data Frame
 
 ### Data Type 
