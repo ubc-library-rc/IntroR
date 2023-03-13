@@ -15,21 +15,32 @@ In R, an operator is a special symbol or keyword used to perform operations on o
 {: .list-with-space}
 * **Assignment Operators**: These operators are used to assign a value to a variable.   
 Examples include `<-` and `=`.
+
 * **Arithmetic Operators**: These operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, and division. Examples include   
 	- `+` for addition,   
 	- `-` for subtraction,   
 	- `*` for multiplication,   
 	- `/` for division,   
 	- and `^` for power.
+
+	Type `?Arithmetic` to read the R document in the help tab.
+
+
 * **Logical Operators**: These operators are used to perform logical operations on values or variables, and return a logical value of TRUE or FALSE. Examples include   
     - `&` for logical AND,   
     - `|` for logical OR,   
     - and `!` for logical NOT.  
+
+    Type `?base::Logic` to read the R document in the help tab.
+
 * **Comparison Operators**: These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include   
 	- `<` for less than,   
 	- `>` for greater than,   
 	- `==` for equal to,   
-	- and `!=` for not equal to.
+	- and `!=` for not equal to.  
+
+	Type `?Comparison` to read the R document in the help tab.
+
 * **Miscellaneous Operators**: These include  
   * the hash sign `#` indicates a comment in the code,   
   * the colon sign `:` creates a sequence of numbers,  
