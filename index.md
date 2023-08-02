@@ -32,8 +32,13 @@ At the end of this workshop, you will be able to:
 
 ## Resources
 Recommended Books:
+* [Chapter 1, 2, & 5 in STAT545](https://stat545.com/install.html)
 * [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
 * [R for Epidemiology](https://www.r4epi.com/)
 * [R for Data Science (2e)](https://r4ds.hadley.nz/)
 * [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html)
 
+
+
+
+<p style="color:grey; font-size:14px; padding-top: 2em"> This workshop was developed by Ashley Yue Mao (Author).

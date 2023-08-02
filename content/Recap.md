@@ -18,6 +18,7 @@ This workshop covered
 See the UBC library Research Commons [event calendar](https://researchcommons.library.ubc.ca/events/) for related workshops on medium and advanced topics.  
 [Book a consultation](https://libcal.library.ubc.ca/appointments/research_commons) with the research commons if interested.  
 Recommended Books:
+* [Chapter 1, 2, & 5 in STAT545](https://stat545.com/install.html)
 * [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
 * [R for Epidemiology](https://www.r4epi.com/)
 * [R for Data Science (2e)](https://r4ds.hadley.nz/)
