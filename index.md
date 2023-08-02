@@ -6,12 +6,12 @@ nav_order: 1
 
 # Welcome to Intro to R and RStudio (beginner)
 
-R is popular for many applications including data visualization and statistical analysis. This beginner orientation is suitable for people with little or no R experience. It will help you decide whether R is the right tool for your data analysis needs and introduce R terminology using the RStudio interface.  
-See the UBC library Research Commons [event calendar](https://researchcommons.library.ubc.ca/events/) for related workshops on intermediate and advanced topics.
+R is popular for many applications including data visualization and statistical analysis. This beginner orientation is suitable for people with little or no R experience. It will help you decide whether R is the right tool for your data analysis needs and introduce R terminology using the RStudio interface.
+See the UBC library Research Commons [event calendar](https://researchcommons.library.ubc.ca/events/) for related workshops or [workshop materials](https://ubc-library-rc.github.io/) on intermediate and advanced topics.
 
-Participants are expected to have installed the latest versions of R and RStudio on their computers before the workshop:  
-Install R from [https://cran.rstudio.com/](https://cran.rstudio.com/)   
-Install RStudio from [https://rstudio.com/products/rstudio/download/#download](https://rstudio.com/products/rstudio/download/#download)  
+Participants are expected to have installed the latest versions of R and RStudio on their computers before the workshop:
+Install R from [https://cran.rstudio.com/](https://cran.rstudio.com/)
+Install RStudio from [https://rstudio.com/products/rstudio/download/#download](https://rstudio.com/products/rstudio/download/#download)
 {: .prereq}
 
 ## Learning objectives
@@ -24,9 +24,9 @@ At the end of this workshop, you will be able to:
 ## Schedule
 
 | 0:00 - 0:05 | Welcome and using Zoom|
-| 0:05 - 0:20 | Intro to R |  
+| 0:05 - 0:20 | Intro to R |
 | 0:20 - 0:35 | Intro to RStudio |
-| 0:35 - 0:55 | Basic Concepts and Syntax |   
+| 0:35 - 0:55 | Basic Concepts and Syntax |
 | 0:55 - 1:00 | Recap |
 | 1:00 - 1:30 | Optional Q&A |
 
