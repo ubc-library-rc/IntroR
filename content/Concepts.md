@@ -276,4 +276,4 @@ setwd() # Set working directory
     <p style="color:grey; font-size:14px; padding-top: 2em">
 
 This page is meant to introduce some core concepts and basic syntax in R. What questions do you have about the terminologies and sytax? Now is a good time for you to share your questions, thoughts and comments.
-</p>
+
