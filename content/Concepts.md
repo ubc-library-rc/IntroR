@@ -255,10 +255,6 @@ getwd() # Get working directory
 setwd() # Set working directory
 ```
 
-<p style="color:grey; font-size:14px; padding-top: 2em">
-
-This page is meant to introduce some core concepts and basic syntax in R. What questions do you have about the terminologies and sytax? Now is a good time for you to share your questions, thoughts and comments.
-
 ## 5. Some tips and tricks
 
 ### Organization in R
@@ -276,3 +272,8 @@ This page is meant to introduce some core concepts and basic syntax in R. What q
 -   If you are figuring out how to do something you have never done before, include the package name (if there is one), the letter R (to avoid python solutions coming up in your results), and the data type (e.g. data frame) along with what you want to do.
 
     Lets say I want to plot a dot plot of the **mtcars** data to look at the miles per gallon (x variable) and the count of cars with that miles per gallon (y variable), I would search "*ggplot2 dot plot in R formula".* Try this out for yourself!
+
+    <p style="color:grey; font-size:14px; padding-top: 2em">
+
+This page is meant to introduce some core concepts and basic syntax in R. What questions do you have about the terminologies and sytax? Now is a good time for you to share your questions, thoughts and comments.
+</p>
