@@ -63,7 +63,12 @@ Compare the magnitude of the following numbers:
 
 <summary>Solution</summary>
 
-a \<- (1 + 100) \* 100 / 2 <br> b \<- 10 \^ 11 <br> c \<- 11 \^ 10 <br> a \< b <br> b \< c <br> a \< c <br>
+a <- sum(1:100) 
+b <- 10^11
+c <- 11^10
+a < b 
+b < c 
+a < c
 
 </details>
 
