@@ -55,9 +55,9 @@ Understanding how to use these different types of operators is important for wri
 ### Practice 1
 
 Compare the magnitude of the following numbers: 
-- a = the sum of all integers from 1 to 100,
-- b = 10 to the power of 11,
-- c = 11 to the power of 10.
+a = the sum of all integers from 1 to 100,
+b = 10 to the power of 11, and
+c = 11 to the power of 10.
 
 <details>
 
