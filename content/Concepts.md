@@ -148,7 +148,6 @@ Each data type has its own properties and functions that can be used to manipula
 
 A **vector** is a basic data structure that represents a sequence of values of *the same data type*. A vector can be created using the `c()` function, which combines values into a vector. For example, to create a vector base on `a`, `b` and `c`, you can use the following code:
 
-Input {: .label .label-green}
 
 ``` r
 d <- c(a, b, c) # create a vector
@@ -268,7 +267,7 @@ setwd() # Set working directory
 
     Lets say I want to plot a dot plot of the **mtcars** data to look at the miles per gallon (x variable) and the count of cars with that miles per gallon (y variable), I would search "*ggplot2 dot plot in R formula".* Try this out for yourself!
 
-    <p style="color:grey; font-size:14px; padding-top: 2em">
+  <p style="color:grey; font-size:14px; padding-top: 2em">
 
 This page is meant to introduce some core concepts and basic syntax in R. What questions do you have about the terminologies and sytax? Now is a good time for you to share your questions, thoughts and comments.
 
