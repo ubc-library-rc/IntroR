@@ -12,7 +12,7 @@ has_toc: false
 
 In R, an operator is a special symbol or keyword used to perform operations on one or more values. There are several types of operators in R, including:
 
-{: .list-with-space} \* **Assignment Operators**: These operators are used to assign a value to a variable. Examples include `<-` and `=`.
+**Assignment Operators**: These operators are used to assign a value to a variable. Examples include `<-` and `=`.
 
 -   **Arithmetic Operators**: These operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, and division. Examples include
 
@@ -73,7 +73,6 @@ a \<- (1 + 100) \* 100 / 2 <br> b \<- 10 \^ 11 <br> c \<- 11 \^ 10 <br> a \< b <
 
 When we calculate the sum of all the integers from 1 to 100, we use a formula to help simplify the calculation. What if we cannot memorize the formula? Does it mean that we have to sum those integers brute force by typing 1 + 2 + 3 + ... all the way up to 100? We can use a built-in function `sum()` with the colon operator `:`.
 
-Input {: .label .label-green}
 
 ``` r
 sum(1:100)
@@ -98,8 +97,6 @@ Packages can be installed using the `install.packages()` function, which downloa
 ### Practice 2
 
 The `tidyverse` is a collection of popular R packages for data manipulation and visualization. Use the following commands to install and load the `tidyverse` package:
-
-Input {: .label .label-green}
 
 ``` r
 install.packages("tidyverse") # Install package
@@ -140,7 +137,6 @@ In R, there are several **data types** that are commonly used, including: \* Num
 
 The `typeof()` function can help check for the data type of a object. For example, `a`, `b`, and `c` we created in practice 1 are all of the double numberic type.
 
-Input {: .label .label-green}
 
 ``` r
 typeof(a); typeof(b); typeof(c) # check for data type, the semicolon ";" separates multiple statements on the same line of code
@@ -178,7 +174,6 @@ These data sets can be accessed by name in R and can be loaded into memory using
 
 To access an element in a data frame, you can use the operator `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and fourth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame with the `$` operator, for example, `iris$Sepal.Length` calls out the `Sepal.Length` variable from `iris` dataset.
 
-Input {: .label .label-green}
 
 ``` r
 data(iris)
@@ -225,8 +220,6 @@ The following screenshot shows how to download and import the 2016 and 2021 Cens
 
 I copied the following code from the Code Preview section on the bottom right corner in Figure 7 when importing data by URL.
 
-Input {: .label .label-green}
-
 ``` r
 library(readr)
 X104526_gbrecs_true <- read_csv("https://abacus.library.ubc.ca/api/access/datafile/104526?gbrecs=true")
@@ -235,7 +228,7 @@ View(X104526_gbrecs_true)
 
 Using these code, others can easily import the target data in the URL, much easier than following the series of screenshots in practice 3. Such a nuance could also contribute to research transparency and reproducibility. Let's paste these code to a script and save it for future use.
 
-*Note:* on your own computer, if you set your working directory to where the .csv file is, you would use X104526_gbrecs_true \<- read.csv("filename.csv"). It's best to keep the file name **free from spaces** and any characters that are not **"-"** or **"\_"**.
+*Note:* on your own computer, if you set your working directory to where the .csv file is, you would use X104526_gbrecs_true \<- read.csv("filename.csv"). It's best to keep the file name **free from spaces** and any characters that are not **"-"** or **"_"**.
 
 <p align="center">
 
@@ -251,7 +244,6 @@ When you click the save button, a pop-out window will ask you to specify where t
 
 </p>
 
-Input {: .label .label-green}
 
 ``` r
 getwd() # Get working directory
