@@ -190,6 +190,8 @@ You can import **foreign data** into R as well. The beginners-friendly way is to
 
 The following screenshot shows how to download and import the 2016 and 2021 Census data about the race and gender of judges in Canada <https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/PG2NB4>. The dataset is retrieved from [Abacus](https://abacus.library.ubc.ca/). Try follow the steps to import the data into your RStudio.
 
+From the Abacus website <https://abacus.library.ubc.ca/> "The Abacus Data Network is a data repository collaboration involving Libraries at Simon Fraser University (SFU), the University of British Columbia (UBC), the University of Northern British Columbia (UNBC) and the University of Victoria (UVic)." 
+
 <p align="center">
 
 <img src="images/Download.png" width="800"/> <em>Figure 4. Download Data from Abacus</em>
@@ -260,7 +262,7 @@ setwd() # Set working directory
 
 -   Make folders with descriptive names for each new activity you do in R. Keep all your files in there. Think, using a different **working directory** for each project you work on.
 
--   When you read files into R, give them a name that is distinctive but easy to type out. Also, dataframe names in R can not start with a number, can not have spaces, and can only have the symbols ".", "-", or "\_" in them.
+-   When you read files into R, give them a name that is distinctive but easy to type out. Also, dataframe names in R can not start with a number, can not have spaces, and can only have the symbols ".", "-", or "_" in them.
 
 ### What to do when you get errors or don't know how to do something
 
