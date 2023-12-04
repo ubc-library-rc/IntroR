@@ -1,7 +1,7 @@
 ---
 layout: default
 title: RStudio
-nav_order: 6
+nav_order: 7
 parent: Workshop Content
 has_toc: false
 ---

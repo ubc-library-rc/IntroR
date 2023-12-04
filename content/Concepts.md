@@ -1,9 +1,9 @@
 ---
+title: "Concepts & Syntax"
 layout: default
-title: Concepts & Syntax
-nav_order: 7
+nav_order: 8
 parent: Workshop Content
-has_toc: false
+has_toc: T
 ---
 
 # **Concepts and Basic Syntax**
@@ -12,7 +12,7 @@ has_toc: false
 
 In R, an operator is a special symbol or keyword used to perform operations on one or more values. There are several types of operators in R, including:
 
-**Assignment Operators**: These operators are used to assign a value to a variable. Examples include `<-` and `=`.
+{: .list-with-space} \* **Assignment Operators**: These operators are used to assign a value to a variable. Examples include `<-` and `=`.
 
 -   **Arithmetic Operators**: These operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, and division. Examples include
 
@@ -54,21 +54,13 @@ Understanding how to use these different types of operators is important for wri
 
 ### Practice 1
 
-Compare the magnitude of the following numbers: 
-a = the sum of all integers from 1 to 100,
-b = 10 to the power of 11, and
-c = 11 to the power of 10.
+Compare the magnitude of the following numbers: \* the sum of all integers from 1 to 100, \* 10 to the power of 11, \* 11 to the power of 10.
 
 <details>
 
 <summary>Solution</summary>
 
-a <- sum(1:100) 
-b <- 10^11
-c <- 11^10
-a < b 
-b < c 
-a < c
+a \<- (1 + 100) \* 100 / 2 <br> b \<- 10 \^ 11 <br> c \<- 11 \^ 10 <br> a \< b <br> b \< c <br> a \< c <br>
 
 </details>
 
@@ -78,6 +70,7 @@ a < c
 
 When we calculate the sum of all the integers from 1 to 100, we use a formula to help simplify the calculation. What if we cannot memorize the formula? Does it mean that we have to sum those integers brute force by typing 1 + 2 + 3 + ... all the way up to 100? We can use a built-in function `sum()` with the colon operator `:`.
 
+Input {: .label .label-green}
 
 ``` r
 sum(1:100)
@@ -93,7 +86,7 @@ When R is installed, it comes with a default package named `base`, which contain
 | `table()` \| Creates a frequency table of a vector or factor
 | `plot()` \| Creates a basic plot of data
 
-### Package
+### Packages
 
 As introduced earlier, R is powerful partially because it is extensible by installing additional packages quickly. In R, a **package** is a collection of functions, data, and documentation.
 
@@ -102,6 +95,8 @@ Packages can be installed using the `install.packages()` function, which downloa
 ### Practice 2
 
 The `tidyverse` is a collection of popular R packages for data manipulation and visualization. Use the following commands to install and load the `tidyverse` package:
+
+Input {: .label .label-green}
 
 ``` r
 install.packages("tidyverse") # Install package
@@ -142,6 +137,7 @@ In R, there are several **data types** that are commonly used, including: \* Num
 
 The `typeof()` function can help check for the data type of a object. For example, `a`, `b`, and `c` we created in practice 1 are all of the double numberic type.
 
+Input {: .label .label-green}
 
 ``` r
 typeof(a); typeof(b); typeof(c) # check for data type, the semicolon ";" separates multiple statements on the same line of code
@@ -153,6 +149,7 @@ Each data type has its own properties and functions that can be used to manipula
 
 A **vector** is a basic data structure that represents a sequence of values of *the same data type*. A vector can be created using the `c()` function, which combines values into a vector. For example, to create a vector base on `a`, `b` and `c`, you can use the following code:
 
+Input {: .label .label-green}
 
 ``` r
 d <- c(a, b, c) # create a vector
@@ -178,6 +175,7 @@ These data sets can be accessed by name in R and can be loaded into memory using
 
 To access an element in a data frame, you can use the operator `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and fourth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame with the `$` operator, for example, `iris$Sepal.Length` calls out the `Sepal.Length` variable from `iris` dataset.
 
+Input {: .label .label-green}
 
 ``` r
 data(iris)
@@ -189,8 +187,6 @@ You can import **foreign data** into R as well. The beginners-friendly way is to
 ### Practice 3
 
 The following screenshot shows how to download and import the 2016 and 2021 Census data about the race and gender of judges in Canada <https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/PG2NB4>. The dataset is retrieved from [Abacus](https://abacus.library.ubc.ca/). Try follow the steps to import the data into your RStudio.
-
-From the Abacus website <https://abacus.library.ubc.ca/> "The Abacus Data Network is a data repository collaboration involving Libraries at Simon Fraser University (SFU), the University of British Columbia (UBC), the University of Northern British Columbia (UNBC) and the University of Victoria (UVic)." 
 
 <p align="center">
 
@@ -226,6 +222,8 @@ From the Abacus website <https://abacus.library.ubc.ca/> "The Abacus Data Networ
 
 I copied the following code from the Code Preview section on the bottom right corner in Figure 7 when importing data by URL.
 
+Input {: .label .label-green}
+
 ``` r
 library(readr)
 X104526_gbrecs_true <- read_csv("https://abacus.library.ubc.ca/api/access/datafile/104526?gbrecs=true")
@@ -234,7 +232,7 @@ View(X104526_gbrecs_true)
 
 Using these code, others can easily import the target data in the URL, much easier than following the series of screenshots in practice 3. Such a nuance could also contribute to research transparency and reproducibility. Let's paste these code to a script and save it for future use.
 
-*Note:* on your own computer, if you set your working directory to where the .csv file is, you would use X104526_gbrecs_true \<- read.csv("filename.csv"). It's best to keep the file name **free from spaces** and any characters that are not **"-"** or **"_"**.
+*Note:* on your own computer, if you set your working directory to where the .csv file is, you would use X104526_gbrecs_true \<- read.csv("filename.csv"). It's best to keep the file name **free from spaces** and any characters that are not **"-"** or \*\*"\_"\*\*.
 
 <p align="center">
 
@@ -250,6 +248,7 @@ When you click the save button, a pop-out window will ask you to specify where t
 
 </p>
 
+Input {: .label .label-green}
 
 ``` r
 getwd() # Get working directory
@@ -264,17 +263,33 @@ setwd() # Set working directory
 
 -   When you read files into R, give them a name that is distinctive but easy to type out. Also, dataframe names in R can not start with a number, can not have spaces, and can only have the symbols ".", "-", or "_" in them.
 
+### Open up your data!
+
+-   Many hours of pain can be saved by regularly opening up your dataframes to see if they look right. You know what your data are supposed to look like, they are yours after all.
+
+-   Opening up your dataframes lets you see things like:
+
+    -   Are some data missing?
+
+    -   Are some columns that are supposed to be numeric currently characters? \*\* This is a very common problem!
+
+    -   Did my data manipulation work as intended? see <https://ubc-library-rc.github.io/intro_to_tidyverse/>
+
+``` r
+# Open up your data with the View() function. Note the CAPITALIZED V!!!!
+View(iris)
+```
+
 ### What to do when you get errors or don't know how to do something
 
 -   Paste the error message into a search engine or ChatGPT.
 
 -   Check that the solution is for the correct R packages, if you know it and that the solution is for R, not for python. The error messages are usually unique, but it's a good habit to get into as your questions will become more complex over time.
 
--   If you are figuring out how to do something you have never done before, include the package name (if there is one), the letter R (to avoid python solutions coming up in your results), and the data type (e.g. data frame) along with what you want to do.
+-   If you are figuring out how to do something you have never done before, include the package name (if there is one), the letter R (to avoid python solutions coming up in your results), and the data type (e.g. data frame) along with what you want to do. Lets say I want to plot a dot plot of the **mtcars** data to look at the miles per gallon (x variable) and the count of cars with that miles per gallon (y variable), I would search "*ggplot2 dot plot in R formula".* Try this out for yourself!
 
-    Lets say I want to plot a dot plot of the **mtcars** data to look at the miles per gallon (x variable) and the count of cars with that miles per gallon (y variable), I would search "*ggplot2 dot plot in R formula".* Try this out for yourself!
-
-  <p style="color:grey; font-size:14px; padding-top: 2em">
+<p style="color:grey; font-size:14px; padding-top: 2em">
 
 This page is meant to introduce some core concepts and basic syntax in R. What questions do you have about the terminologies and sytax? Now is a good time for you to share your questions, thoughts and comments.
 
+</p>
