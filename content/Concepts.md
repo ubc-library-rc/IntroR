@@ -12,9 +12,11 @@ has_toc: T
 
 In R, an operator is a special symbol or keyword used to perform operations on one or more values. There are several types of operators in R, including:
 
-{: .list-with-space} \* **Assignment Operators**: These operators are used to assign a value to a variable. Examples include `<-` and `=`.
+### **Assignment Operators**: 
+These operators are used to assign a value to a variable. Examples include `<-` and `=`.
 
--   **Arithmetic Operators**: These operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, and division. Examples include
+### **Arithmetic Operators**: 
+These operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, and division. Examples include
 
     -   `+` for addition,
     -   `-` for subtraction,
@@ -24,7 +26,8 @@ In R, an operator is a special symbol or keyword used to perform operations on o
 
     Type `?Arithmetic` to read the R document in the help tab.
 
--   **Logical Operators**: These operators are used to perform logical operations on values or variables, and return a logical value of TRUE or FALSE. Examples include
+### **Logical Operators**: 
+These operators are used to perform logical operations on values or variables, and return a logical value of TRUE or FALSE. Examples include
 
     -   `&` for logical AND,
     -   `|` for logical OR,
@@ -32,7 +35,7 @@ In R, an operator is a special symbol or keyword used to perform operations on o
 
     Type `?base::Logic` to read the R document in the help tab.
 
--   **Comparison Operators**: These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include
+### **Comparison Operators**: These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include
 
     -   `<` for less than,
     -   `>` for greater than,
@@ -41,9 +44,9 @@ In R, an operator is a special symbol or keyword used to perform operations on o
 
     Type `?Comparison` to read the R document in the help tab.
 
--   **Miscellaneous Operators**: These include
+### **Miscellaneous Operators and Common Symbols**: 
 
-    -   the hash sign `#` indicates a comment in the code (tip \##### at the end of a comment creates a section that you can open and close as needed),
+    -   the hash sign `#` indicates a comment in the code (tip ##### at the end of a comment creates a section that you can open and close as needed),
     -   the colon sign `:` creates a sequence of numbers,
     -   the square bracket `[]` indexes an object such as a vector,
     -   the dollar sign `$` accesses a variable from a data frame (for example from the dataframe *mtcars*, access the *mpg* variable with *mtcars\$mpg*),
@@ -52,7 +55,7 @@ In R, an operator is a special symbol or keyword used to perform operations on o
 
 Understanding how to use these different types of operators is important for writing efficient and effective code in R.
 
-### Practice 1
+## Practice 1
 
 Compare the magnitude of the following numbers: \* the sum of all integers from 1 to 100, \* 10 to the power of 11, \* 11 to the power of 10.
 
@@ -69,8 +72,6 @@ a \<- (1 + 100) \* 100 / 2 <br> b \<- 10 \^ 11 <br> c \<- 11 \^ 10 <br> a \< b <
 ### Function
 
 When we calculate the sum of all the integers from 1 to 100, we use a formula to help simplify the calculation. What if we cannot memorize the formula? Does it mean that we have to sum those integers brute force by typing 1 + 2 + 3 + ... all the way up to 100? We can use a built-in function `sum()` with the colon operator `:`.
-
-Input {: .label .label-green}
 
 ``` r
 sum(1:100)
@@ -92,11 +93,10 @@ As introduced earlier, R is powerful partially because it is extensible by insta
 
 Packages can be installed using the `install.packages()` function, which downloads the package from a repository (usually cran) and installs it on your system. Once a package is installed, its functions and data can be loaded into the R environment using the `library()` function. You **do not need to install a package repeatedly, but you do need to library it again in order to use it every time when you restart the RStudio.** If you want to use a function from a package without library(), you can use the double colon operator, for example, `dplyr::filter()`, where `dplyr` is the package name, and `filter()` is a function from the package.
 
-### Practice 2
+## Practice 2
 
 The `tidyverse` is a collection of popular R packages for data manipulation and visualization. Use the following commands to install and load the `tidyverse` package:
 
-Input {: .label .label-green}
 
 ``` r
 install.packages("tidyverse") # Install package
@@ -131,17 +131,14 @@ library(tidyverse) # Load package
 
 ## 3. Data Type, Vector, and Data Frame
 
-### Data Type
+### Data Types
 
-In R, there are several **data types** that are commonly used, including: \* Numeric: Represents numbers with decimal points. Can be either integers (e.g., 3, 7) or double/floating-point numbers (e.g., 3.14, 2.5e-3). \* Character: Represents text strings. Enclosed in quotes (e.g., "hello", 'world'). \* Factor: Represents categorical data with a fixed set of possible values or levels (e.g., "cactus", "orchid"). \* Logical: Represents Boolean values (TRUE or FALSE) or logical values (NA, NULL).
+In R, there are several **data types** that are commonly used, including
 
-The `typeof()` function can help check for the data type of a object. For example, `a`, `b`, and `c` we created in practice 1 are all of the double numberic type.
-
-Input {: .label .label-green}
-
-``` r
-typeof(a); typeof(b); typeof(c) # check for data type, the semicolon ";" separates multiple statements on the same line of code
-```
+| `Numeric` \| Represents numbers with decimal points. Can be either integers (e.g., 3, 7) or double/floating-point numbers (e.g., 3.14, 2.5e-3). 
+| `Character` \| Represents text strings. Enclosed in quotes (e.g., "hello", 'world'). 
+| `Factor` \| Represents categorical data with a fixed set of possible values or levels (e.g., "cactus", "orchid").
+| `Logical` \| Represents Boolean values (TRUE or FALSE) or logical values (NA, NULL)
 
 Each data type has its own properties and functions that can be used to manipulate and analyze data. Data type is an important concept in R because it affects how the data is stored, processed, and analyzed. Choosing the appropriate data type can help you optimize your memory usage, perform the necessary data manipulations, conduct the appropriate statistical analyses, and create effective visualizations of your data.
 
@@ -149,7 +146,6 @@ Each data type has its own properties and functions that can be used to manipula
 
 A **vector** is a basic data structure that represents a sequence of values of *the same data type*. A vector can be created using the `c()` function, which combines values into a vector. For example, to create a vector base on `a`, `b` and `c`, you can use the following code:
 
-Input {: .label .label-green}
 
 ``` r
 d <- c(a, b, c) # create a vector
@@ -184,7 +180,7 @@ iris[2, 4]
 
 You can import **foreign data** into R as well. The beginners-friendly way is to import through the Import Dataset button under Environment on the top right pane.
 
-### Practice 3
+## Practice 3
 
 The following screenshot shows how to download and import the 2016 and 2021 Census data about the race and gender of judges in Canada <https://abacus.library.ubc.ca/dataset.xhtml?persistentId=hdl:11272.1/AB2/PG2NB4>. The dataset is retrieved from [Abacus](https://abacus.library.ubc.ca/). Try follow the steps to import the data into your RStudio.
 
@@ -222,7 +218,6 @@ The following screenshot shows how to download and import the 2016 and 2021 Cens
 
 I copied the following code from the Code Preview section on the bottom right corner in Figure 7 when importing data by URL.
 
-Input {: .label .label-green}
 
 ``` r
 library(readr)
@@ -286,7 +281,7 @@ View(iris)
 
 -   Check that the solution is for the correct R packages, if you know it and that the solution is for R, not for python. The error messages are usually unique, but it's a good habit to get into as your questions will become more complex over time.
 
--   If you are figuring out how to do something you have never done before, include the package name (if there is one), the letter R (to avoid python solutions coming up in your results), and the data type (e.g. data frame) along with what you want to do. Lets say I want to plot a dot plot of the **mtcars** data to look at the miles per gallon (x variable) and the count of cars with that miles per gallon (y variable), I would search "*ggplot2 dot plot in R formula".* Try this out for yourself!
+-   If you are figuring out how to do something you have never done before, include the package name (if there is one), the letter R (to avoid python solutions coming up in your results), and the data type (e.g. data frame) along with what you want to do. Lets say I want to plot a dot plot of the **mtcars** data to look at the miles per gallon (x variable) and the count of cars with that miles per gallon (y variable), I would search "*ggplot2 dot plot in R".* Try this out for yourself!
 
 <p style="color:grey; font-size:14px; padding-top: 2em">
 
