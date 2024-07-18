@@ -35,7 +35,8 @@ These operators are used to perform logical operations on values or variables, a
 
     Type `?base::Logic` to read the R document in the help tab.
 
-### **Comparison Operators**: These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include
+### **Comparison Operators**: 
+These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include
 
     -   `<` for less than,
     -   `>` for greater than,
@@ -57,13 +58,16 @@ Understanding how to use these different types of operators is important for wri
 
 ## Practice 1
 
-Compare the magnitude of the following numbers: \* the sum of all integers from 1 to 100, \* 10 to the power of 11, \* 11 to the power of 10.
+Compare the magnitude of the following numbers: 
+    a) the sum of all integers from 1 to 100, 
+    b) 10 to the power of 11, 
+    c) 11 to the power of 10
 
 <details>
 
 <summary>Solution</summary>
 
-a \<- (1 + 100) \* 100 / 2 <br> b \<- 10 \^ 11 <br> c \<- 11 \^ 10 <br> a \< b <br> b \< c <br> a \< c <br>
+b>c>a
 
 </details>
 
@@ -107,7 +111,6 @@ library(tidyverse) # Load package
 
 <summary><u>Click here for outputs</u></summary>
 
-::: {style="border: thin grey 1px; background-color: #eeebee; padding:15px;"}
 <p><strong>Output 1:</strong></p>
 
 <img src="images/install_package.png" style="margin-left:1px; margin-bottom:10px"/>
@@ -171,7 +174,6 @@ These data sets can be accessed by name in R and can be loaded into memory using
 
 To access an element in a data frame, you can use the operator `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and fourth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame with the `$` operator, for example, `iris$Sepal.Length` calls out the `Sepal.Length` variable from `iris` dataset.
 
-Input {: .label .label-green}
 
 ``` r
 data(iris)
@@ -243,7 +245,7 @@ When you click the save button, a pop-out window will ask you to specify where t
 
 </p>
 
-Input {: .label .label-green}
+
 
 ``` r
 getwd() # Get working directory
