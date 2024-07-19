@@ -15,38 +15,22 @@ In R, an operator is a special symbol or keyword used to perform operations on o
 ### **Assignment Operators**: 
 These operators are used to assign a value to a variable. Examples include `<-` and `=`.
 
+``` r
+iris_dataframe = iris
+```
+
+
 ### **Arithmetic Operators**: 
-These operators are used to perform basic mathematical operations such as addition, subtraction, multiplication, and division. Examples include
-
-    -   `+` for addition,
-    -   `-` for subtraction,
-    -   `*` for multiplication,
-    -   `/` for division,
-    -   and `^` for power.
-
-    Type `?Arithmetic` to read the R document in the help tab.
+These operators are used to perform basic mathematical operations such as addition (+), subtraction (-), multiplication (*), and division (/). Type `?Arithmetic` to read the R document in the help tab.
 
 ### **Logical Operators**: 
-These operators are used to perform logical operations on values or variables, and return a logical value of TRUE or FALSE. Examples include
-
-    -   `&` for logical AND,
-    -   `|` for logical OR,
-    -   and `!` for logical NOT.
-
-    Type `?base::Logic` to read the R document in the help tab.
+These operators are used to perform logical operations  Examples include: AND (&), OR (|), and NOT (!).  Type `?base::Logic` to read the R document in the help tab. 
 
 ### **Comparison Operators**: 
-These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include
+These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include: less than (<), greater than (>), exactly equal to (==), and not equal to (!=)
 
-    -   `<` for less than,
-    -   `>` for greater than,
-    -   `==` for equal to,
-    -   and `!=` for not equal to.
-
-    Type `?Comparison` to read the R document in the help tab.
 
 ### **Miscellaneous Operators and Common Symbols**: 
-
     -   the hash sign `#` indicates a comment in the code (tip ##### at the end of a comment creates a section that you can open and close as needed),
     -   the colon sign `:` creates a sequence of numbers,
     -   the square bracket `[]` indexes an object such as a vector,
@@ -55,21 +39,6 @@ These operators are used to compare two values or variables and return a logical
     -   and the double colon `::` used to access functions or variables from a specific package.
 
 Understanding how to use these different types of operators is important for writing efficient and effective code in R.
-
-## Practice 1
-
-Compare the magnitude of the following numbers: 
-    a) the sum of all integers from 1 to 100, 
-    b) 10 to the power of 11, 
-    c) 11 to the power of 10
-
-<details>
-
-<summary>Solution</summary>
-
-b>c>a
-
-</details>
 
 ## 2. Functions and Packages
 
@@ -90,6 +59,35 @@ When R is installed, it comes with a default package named `base`, which contain
 | `str()` \| Displays the structure of an R object
 | `table()` \| Creates a frequency table of a vector or factor
 | `plot()` \| Creates a basic plot of data
+
+
+
+
+Let's subset the iris_dataframe to test these out. Let's keep the setosa species with a sepal length below 5
+
+
+``` r
+s_below5 = subset(iris_dataframe, 
+                   iris_dataframe$Species == "setosa" &
+                     iris_dataframe$Sepal.Length <5)
+```
+
+
+## Practice 1
+
+Compare the magnitude of the following numbers: 
+    a) the sum of all integers from 1 to 100, 
+    b) 9 to the power of 10, 
+    c) 10 to the power of 9
+
+<details>
+
+<summary>Solution</summary>
+
+b>c>a
+
+</details>
+
 
 ### Packages
 
@@ -151,7 +149,7 @@ A **vector** is a basic data structure that represents a sequence of values of *
 
 
 ``` r
-d <- c(a, b, c) # create a vector
+d <- c("a", "b", "c") # create a vector
 ```
 
 To access an element in a vector, you can use the operator `[]` and a number inside it indicating the position of the element. For example, to access the second element in `d`, the syntax is `d[2]`.
@@ -177,7 +175,6 @@ To access an element in a data frame, you can use the operator `[]` and two numb
 
 ``` r
 data(iris)
-iris[2, 4]
 ```
 
 You can import **foreign data** into R as well. The beginners-friendly way is to import through the Import Dataset button under Environment on the top right pane.
