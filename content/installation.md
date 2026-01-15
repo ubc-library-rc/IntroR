@@ -8,7 +8,7 @@ has_toc: false
 
 ### 1. Install R - the computing software
 
-Go to <https://mirror.rcg.sfu.ca/mirror/CRAN/> and download the right version for your operating system
+Go to <https://cran.r-project.org/> and download the right version for your operating system
 
 ![](images/installR.png)
 
