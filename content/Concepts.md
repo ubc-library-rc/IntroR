@@ -103,16 +103,29 @@ s_below5 = subset(iris_dataframe,
 
 ## Practice 1
 
-Compare the magnitude of the following numbers: 
-    a) the sum of all integers from 1 to 100, 
-    b) 9 to the power of 10, 
-    c) 10 to the power of 9
+You're comparing coffee shops! Which has the best deal per cup?
+- Shop A: 12-pack of pods for $15
+- Shop B: 3 bags (each makes 10 cups) for $24  
+- Shop C: Single cups at $2.50 each
+
+Use R to calculate the price per cup for each shop and rank them.
 
 <details>
 
 <summary>Solution</summary>
 
-b>c>a
+``` r
+shop_a <- 15 / 12
+shop_b <- 24 / (3 * 10)
+shop_c <- 2.50
+
+# Compare
+shop_a  # $1.25 per cup
+shop_b  # $0.80 per cup
+shop_c  # $2.50 per cup
+```
+
+Best deal: shop_b < shop_a < shop_c
 
 </details>
 
