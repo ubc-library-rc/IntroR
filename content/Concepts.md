@@ -65,8 +65,6 @@ Understanding how to use these different types of operators is important for wri
 
 ### Function
 
-**Concept:** Functions are like recipes - give them ingredients, get results
-
 When we calculate the sum of all the integers from 1 to 100, we use a formula to help simplify the calculation. What if we cannot memorize the formula? Does it mean that we have to sum those integers brute force by typing 1 + 2 + 3 + ... all the way up to 100? We can use a built-in function `sum()` with the colon operator `:`.
 
 ``` r
@@ -93,9 +91,6 @@ summary(iris$Sepal.Length)
 # Visualization
 plot(iris$Sepal.Length, iris$Sepal.Width)
 ```
-
-**Practice:** Find the maximum petal length in the iris dataset
-
 Let's subset the iris_dataframe to test these out. Let's keep the setosa species with a sepal length below 5
 
 
@@ -123,8 +118,6 @@ b>c>a
 
 
 ### Packages
-
-**Analogy:** R comes with basic apps (base R), packages are like downloading new apps
 
 As introduced earlier, R is powerful partially because it is extensible by installing additional packages quickly. In R, a **package** is a collection of functions, data, and documentation.
 
@@ -165,14 +158,7 @@ library(tidyverse) # Load package
 
 </details>
 
-**Teaser:** Here's what you can create with ggplot2 (from tidyverse)
-``` r
-library(ggplot2)
-ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
-  geom_point()
-```
-
-## 4. Data Type, Vector, and Data Frame
+## 3. Data Type, Vector, and Data Frame
 
 ### Data Types
 
@@ -187,11 +173,11 @@ Each data type has its own properties and functions that can be used to manipula
 
 ### Vector
 
-A **vector** is a basic data structure that represents a sequence of values of *the same data type*. A vector can be created using the `c()` function, which combines values into a vector. For example, to create a vector base on `a`, `b` and `c`, you can use the following code:
+A **vector** is a basic data structure that represents a sequence of values of *the same data type*. A vector can be created using the `c()` function, which combines values into a vector. For example, to create a vector base on `Amsterdam`, `Kenya` and `England`, you can use the following code:
 
 
 ``` r
-d <- c("a", "b", "c") # create a vector
+d <- c("Amsterdam", "Kenya", "England") # create a vector
 ```
 
 To access an element in a vector, you can use the operator `[]` and a number inside it indicating the position of the element. For example, to access the second element in `d`, the syntax is `d[2]`.
