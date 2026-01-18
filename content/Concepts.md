@@ -20,11 +20,9 @@ sqrt(16)
 
 **Example: Creating your first variable**
 ``` r
-my_age <- 25
-my_name <- "Alex"
+my_age <- 33
+my_name <- "Demian"
 ```
-
-**Key concept:** Assignment operator `<-` vs `=`
 
 ---
 
