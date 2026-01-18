@@ -4,7 +4,7 @@ title: Outline
 nav_order: 1
 ---
 
-# Welcome to Intro to R and RStudio (beginner)
+# Welcome to Intro to R and RStudio (Part 1 and Part 2)
 
 R is popular for many applications including data visualization and statistical analysis. This beginner orientation is suitable for people with little or no R experience. It will help you decide whether R is the right tool for your data analysis needs and introduce R terminology using the RStudio interface.
 See the UBC library Research Commons [event calendar](https://researchcommons.library.ubc.ca/events/) for related workshops or [workshop materials](https://ubc-library-rc.github.io/) on intermediate and advanced topics.
@@ -14,21 +14,39 @@ Install R from [https://cran.rstudio.com/](https://cran.rstudio.com/)
 Install RStudio from [https://rstudio.com/products/rstudio/download/#download](https://rstudio.com/products/rstudio/download/#download)
 {: .prereq}
 
-## Learning objectives
+## Overall Learning objectives
 
-At the end of this workshop, you will be able to:
+At the end of these two workshops (Part 1 and Part 2), you will be able to:
 1. Understand what R is used for and its pros and cons compared to alternatives.
 2. Know how to use RStudio including the console, source editor, environment, and help pane.
 3. Grasp basic concepts and syntax used in R, such as operator, function, package, data type and structure.
 
+
+| Part 1: Getting Oriented in R | Part 2: Working with Data |
+|-------------------------------|---------------------------|
+| What does code look like in R | Packages & tidyverse |
+| Objects, assignment, and vectors | Importing data |
+| Data frames + subsetting | Working directory |
+| Functions | Complex subsetting & logic |
+| Light intro to packages | Reproducibility tips |
+
 ## Schedule
 
-| 0:00 - 0:05 | Welcome and using Zoom|
-| 0:05 - 0:20 | Intro to R |
-| 0:20 - 0:35 | Intro to RStudio |
-| 0:35 - 0:55 | Basic Concepts and Syntax |
-| 0:55 - 1:00 | Recap |
-| 1:00 - 1:30 | Optional Q&A |
+### Part 1 (Week 1)
+
+| 0:00 - 0:05 | Welcome and setup check |
+| 0:05 - 0:10 | What is R? Why use it? |
+| 0:10 - 0:25 | Getting oriented (objects vectors, data frames) |
+| 0:25 - 0:35 | Functions and subsetting |
+| 0:35 - 0:40 | Package preview + homework |
+
+### Part 2 (Week 2)
+
+| 0:00 - 0:05 | Recap  |
+| 0:05 - 0:15 | Tidyverse and importing data |
+| 0:15 - 0:20 | Working directories |
+| 0:20 - 0:35 | Complex subsetting practice |
+| 0:35 - 0:40 | Reproducibility tips |
 
 ## Resources
 Recommended Books:

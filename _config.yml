@@ -1,5 +1,5 @@
 title: Intro to R and RStudio (beginner)
-remote_theme: ubc-library-rc/rc-theme
+#remote_theme: ubc-library-rc/rc-theme
 color_scheme: rc
 github_repo_url: "https://github.com/ubc-library-rc/IntroR/" 
 
@@ -10,6 +10,6 @@ license_image_url: "https://i.creativecommons.org/l/by/4.0/88x31.png"
 
 # required for building jekyll site locally
 plugins:
-  - jekyll-remote-theme
+  #- jekyll-remote-theme
   - jekyll-seo-tag
   - jekyll-include-cache
