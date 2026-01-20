@@ -8,7 +8,25 @@ has_toc: T
 
 # **Concepts and Basic Syntax**
 
-## 1. Operators
+## 1. What Does Code Look Like in R?
+
+**Example: R as a simple calculator**
+``` r
+# R as a calculator
+2 + 2
+10 * 5
+sqrt(16)
+```
+
+**Example: Creating your first variable**
+``` r
+my_age <- 33
+my_name <- "Demian"
+```
+
+---
+
+## 2. Operators
 
 In R, an operator is a special symbol or keyword used to perform operations on one or more values. There are several types of operators in R, including:
 
@@ -18,6 +36,9 @@ These operators are used to assign a value to a variable. Examples include `<-` 
 ``` r
 iris_dataframe = iris
 ```
+<img src="images/iris_flowers.png" width="600" alt="Iris Flowers"/>
+  
+[Image Source: CodeSignal](https://codesignal.com/learn/courses/intro-to-unsupervised-machine-learning/lessons/exploring-and-visualizing-the-iris-dataset)
 
 
 ### **Arithmetic Operators**: 
@@ -40,7 +61,7 @@ These operators are used to compare two values or variables and return a logical
 
 Understanding how to use these different types of operators is important for writing efficient and effective code in R.
 
-## 2. Functions and Packages
+## 3. Functions and Packages
 
 ### Function
 
@@ -60,9 +81,16 @@ When R is installed, it comes with a default package named `base`, which contain
 | `table()` \| Creates a frequency table of a vector or factor
 | `plot()` \| Creates a basic plot of data
 
+**Common functions in action:**
+``` r
+# Descriptive statistics
+mean(iris$Sepal.Length)
+sd(iris$Sepal.Length)
+summary(iris$Sepal.Length)
 
-
-
+# Visualization
+plot(iris$Sepal.Length, iris$Sepal.Width)
+```
 Let's subset the iris_dataframe to test these out. Let's keep the setosa species with a sepal length below 5
 
 
@@ -75,16 +103,29 @@ s_below5 = subset(iris_dataframe,
 
 ## Practice 1
 
-Compare the magnitude of the following numbers: 
-    a) the sum of all integers from 1 to 100, 
-    b) 9 to the power of 10, 
-    c) 10 to the power of 9
+You're comparing coffee shops! Which has the best deal per cup?
+- Shop A: 12-pack of pods for $15
+- Shop B: 3 bags (each makes 10 cups) for $24  
+- Shop C: Single cups at $2.50 each
+
+Use R to calculate the price per cup for each shop and rank them.
 
 <details>
 
 <summary>Solution</summary>
 
-b>c>a
+``` r
+shop_a <- 15 / 12
+shop_b <- 24 / (3 * 10)
+shop_c <- 2.50
+
+# Compare
+shop_a  # $1.25 per cup
+shop_b  # $0.80 per cup
+shop_c  # $2.50 per cup
+```
+
+Best deal: shop_b < shop_a < shop_c
 
 </details>
 
@@ -145,20 +186,45 @@ Each data type has its own properties and functions that can be used to manipula
 
 ### Vector
 
-A **vector** is a basic data structure that represents a sequence of values of *the same data type*. A vector can be created using the `c()` function, which combines values into a vector. For example, to create a vector base on `a`, `b` and `c`, you can use the following code:
+A **vector** is a basic data structure that represents a sequence of values of *the same data type*. A vector can be created using the `c()` function, which combines values into a vector. For example, to create a vector base on `Amsterdam`, `Kenya` and `England`, you can use the following code:
 
 
 ``` r
-d <- c("a", "b", "c") # create a vector
+d <- c("Amsterdam", "Kenya", "England") # create a vector
 ```
 
 To access an element in a vector, you can use the operator `[]` and a number inside it indicating the position of the element. For example, to access the second element in `d`, the syntax is `d[2]`.
+
+**Example: Track your weekly coffee spending**
+``` r
+# Individual days
+monday_coffee <- 5.50
+tuesday_coffee <- 4.25
+wednesday_coffee <- 6.00
+
+# Better: use a vector!
+weekly_coffee <- c(5.50, 4.25, 6.00, 5.50, 7.00, 0, 8.50)
+
+# Calculate total and average
+sum(weekly_coffee)
+mean(weekly_coffee)
+```
+
+**Why vectors matter:** 
+- Store related data together
+- Perform calculations on entire dataset
+- Foundation for data frames
 
 *Note:* the `c()` function is also used to make lists. This is important for lots of things in R including storing a list of colors to use for plots or keeping a list of objects (e.g. DNA sequences) to subset a dataframe by.
 
 ### Data Frame
 
 A **data frame** is a two-dimensional tabular data structure that represents a rectangular grid of data, where each row represents an observation and each column represents a variable. Essentially, a data frame is several equal-length vectors - one for each column. The data in each column must be of the same type, while the data in each row can be different types.
+
+<img src="images/vector_dataframe.png" width="600" alt="Vectors vs Data Frames in R"/>
+
+[Image Source: Data Structures](https://zief0002.github.io/epsy-5261/01-03-data-structures-in-r.html)
+
 
 R comes with several **built-in data frames**. These data sets can be useful for learning and practicing data manipulation, analysis, and visualization techniques. To name a few,
 
@@ -172,9 +238,28 @@ These data sets can be accessed by name in R and can be loaded into memory using
 
 To access an element in a data frame, you can use the operator `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and fourth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame with the `$` operator, for example, `iris$Sepal.Length` calls out the `Sepal.Length` variable from `iris` dataset.
 
-
+**Example: Exploring the iris dataset**
 ``` r
+# Load and explore
 data(iris)
+View(iris)
+head(iris)
+str(iris)
+```
+
+**Simple subsetting:**
+``` r
+# Get one column
+iris$Sepal.Length
+
+# Get one row
+iris[1, ]
+
+# Get one cell
+iris[1, 4]
+
+# Get setosa species only
+setosa_only <- iris[iris$Species == "setosa", ]
 ```
 
 You can import **foreign data** into R as well. The beginners-friendly way is to import through the Import Dataset button under Environment on the top right pane.
@@ -213,7 +298,7 @@ The following screenshot shows how to download and import the 2016 and 2021 Cens
 
 </p>
 
-## 4. Working Directory
+## 5. Working Directory
 
 I copied the following code from the Code Preview section on the bottom right corner in Figure 7 when importing data by URL.
 
@@ -249,7 +334,7 @@ getwd() # Get working directory
 setwd() # Set working directory
 ```
 
-## 5. Some tips and tricks
+## 6. Some Tips and Tricks
 
 ### Organization in R
 
