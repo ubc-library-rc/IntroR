@@ -1,0 +1,34 @@
+<h3 id="1-install-r---the-computing-software">1. Install R - the computing software</h3>
+
+<p>Go to <a href="https://cran.r-project.org/">https://cran.r-project.org/</a> and download the right version for your operating system</p>
+
+<p><img src="images/installR.png" alt="" /></p>
+
+<h3 id="2-install-rstudio---the-graphical-interface-that-we-will-be-working-in-today">2. Install RStudio - the graphical interface that we will be working in today</h3>
+
+<p>Go to <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a> and scroll to find the right version for your operating system</p>
+
+<p><img src="images/install_RStudio.png" alt="" /></p>
+
+<h3 id="3-format-r">3. Format R</h3>
+
+<p>Open <em>tools &gt; Global Options</em> and then you will see the pop up below. In the <em>General</em> tab, select the “Never” option for Save workspace to .RData on exit.</p>
+
+<p><img src="images/never_save.png" alt="" /></p>
+
+<h4 id="why-are-we-formatting-r-like-this">Why are we formatting R like this?</h4>
+
+<p>The workspace image (what we just set to <em>“never save”</em>) is en entire history of your R session. Although this seems like a good thing to save on the surface, there are a few reasons to not save the workspace image:</p>
+
+<ol>
+  <li>
+    <p>It takes up a lot of memory on your computer and makes R start up much slower.</p>
+  </li>
+  <li>
+    <p>Restarting R and re-running the code in a fresh R session as a troubleshooting method now doesn’t work.</p>
+  </li>
+  <li>
+    <p>If you send your script (R code) to someone else, they don’t have your workspace image, so it’s possible the script will not work for them when they run it. This is a consequence of no testing code properly, which follows point 2.</p>
+  </li>
+</ol>
+

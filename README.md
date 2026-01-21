@@ -1,4 +1,4 @@
-# Intro to R and RStudio (beginner)
+# Intro to R and RStudio (Part 1 and Part 2)
 ### UBC Library Research Commons
 
 Description: An orientation suitable for people with little or no R experience. This workshop will help participants decide whether R is the right tool for their data analysis needs and introduce R terminology using the RStudio interface. 
