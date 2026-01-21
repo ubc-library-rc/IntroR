@@ -91,15 +91,6 @@ summary(iris$Sepal.Length)
 # Visualization
 plot(iris$Sepal.Length, iris$Sepal.Width)
 ```
-Let's subset the iris_dataframe to test these out. Let's keep the setosa species with a sepal length below 5
-
-
-``` r
-s_below5 = subset(iris_dataframe, 
-                   iris_dataframe$Species == "setosa" &
-                     iris_dataframe$Sepal.Length <5)
-```
-
 
 ## Practice 1
 
@@ -110,11 +101,10 @@ You're comparing coffee shops! Which has the best deal per cup?
 
 Use R to calculate the price per cup for each shop and rank them.
 
-<details>
-
+<details markdown="block">
 <summary>Solution</summary>
 
-``` r
+```r
 shop_a <- 15 / 12
 shop_b <- 24 / (3 * 10)
 shop_c <- 2.50
@@ -238,14 +228,6 @@ These data sets can be accessed by name in R and can be loaded into memory using
 
 To access an element in a data frame, you can use the operator `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and fourth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame with the `$` operator, for example, `iris$Sepal.Length` calls out the `Sepal.Length` variable from `iris` dataset.
 
-**Example: Exploring the iris dataset**
-``` r
-# Load and explore
-data(iris)
-View(iris)
-head(iris)
-str(iris)
-```
 
 **Simple subsetting:**
 ``` r
@@ -264,6 +246,13 @@ setosa_only <- iris[iris$Species == "setosa", ]
 
 You can import **foreign data** into R as well. The beginners-friendly way is to import through the Import Dataset button under Environment on the top right pane.
 
+Let's subset the iris_dataframe to test these out. Let's keep the setosa species with a sepal length below 5
+
+``` r
+s_below5 = subset(iris_dataframe, 
+                   iris_dataframe$Species == "setosa" &
+                     iris_dataframe$Sepal.Length <5)
+```
 
 ## 4. Some Tips and Tricks
 
@@ -288,6 +277,14 @@ You can import **foreign data** into R as well. The beginners-friendly way is to
 ``` r
 # Open up your data with the View() function. Note the CAPITALIZED V!!!!
 View(iris)
+```
+**More Options**
+``` r
+# Exploring the iris dataset
+data(iris)
+View(iris)
+head(iris)
+str(iris)
 ```
 
 ### What to do when you get errors or don't know how to do something
