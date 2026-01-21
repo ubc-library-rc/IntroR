@@ -1,7 +1,7 @@
 ---
 title: "Census Data Practice"
 layout: default
-nav_order: 9
+nav_exclude: true
 parent: Workshop Content
 ---
 
