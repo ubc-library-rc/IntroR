@@ -92,7 +92,7 @@ summary(iris$Sepal.Length)
 plot(iris$Sepal.Length, iris$Sepal.Width)
 ```
 
-## Practice 1
+#### Practice 1
 
 You're comparing coffee shops! Which has the best deal per cup?
 - Shop A: 12-pack of pods for $15
@@ -126,7 +126,7 @@ As introduced earlier, R is powerful partially because it is extensible by insta
 
 Packages can be installed using the `install.packages()` function, which downloads the package from a repository (usually cran) and installs it on your system. Once a package is installed, its functions and data can be loaded into the R environment using the `library()` function. You **do not need to install a package repeatedly, but you do need to library it again in order to use it every time when you restart the RStudio.** If you want to use a function from a package without library(), you can use the double colon operator, for example, `dplyr::filter()`, where `dplyr` is the package name, and `filter()` is a function from the package.
 
-## Practice 2
+#### Practice 2
 
 The `tidyverse` is a collection of popular R packages for data manipulation and visualization. Use the following commands to install and load the `tidyverse` package:
 
