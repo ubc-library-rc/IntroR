@@ -161,7 +161,7 @@ library(tidyverse) # Load package
 
 </details>
 
-## 3. Data Type, Vector, and Data Frame
+## 4. Data Type, Vector, and Data Frame
 
 ### Data Types
 
@@ -254,7 +254,7 @@ s_below5 = subset(iris_dataframe,
                      iris_dataframe$Sepal.Length <5)
 ```
 
-## 4. Some Tips and Tricks
+## 5. Some Tips and Tricks
 
 ### Organization in R
 
