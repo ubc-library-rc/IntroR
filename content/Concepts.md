@@ -136,6 +136,19 @@ install.packages("tidyverse") # Install package
 library(tidyverse) # Load package
 ```
 
+Let's subset the iris_dataframe to test the capabilities of the tidyverse package. Let's keep the setosa species with a sepal length below 5, add a new Sepal Ratio column (length ÷ width), select the columns of interest, and arrange the rows from smallest to largest ratio.
+
+``` r
+# Take iris, THEN filter, THEN add a new column, THEN pick columns, THEN sort.
+
+s_below5 <- iris_dataframe %>%
+  filter(Species == "setosa", Sepal.Length < 5) %>%      # keep small setosa flowers
+  mutate(Sepal.Ratio = round(Sepal.Length / Sepal.Width, 2)) %>%  # create a new variable
+  select(Species, Sepal.Length, Sepal.Width, Sepal.Ratio) %>%     # keep columns we care about
+  arrange(Sepal.Ratio)                                  # sort smallest Ratio
+s_below5
+```
+
 <details>
 
 <summary><u>Click here for outputs</u></summary>
@@ -245,14 +258,6 @@ setosa_only <- iris[iris$Species == "setosa", ]
 ```
 
 You can import **foreign data** into R as well. The beginners-friendly way is to import through the Import Dataset button under Environment on the top right pane.
-
-Let's subset the iris_dataframe to test these out. Let's keep the setosa species with a sepal length below 5
-
-``` r
-s_below5 = subset(iris_dataframe, 
-                   iris_dataframe$Species == "setosa" &
-                     iris_dataframe$Sepal.Length <5)
-```
 
 ## 5. Some Tips and Tricks
 
