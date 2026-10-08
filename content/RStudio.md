@@ -34,7 +34,7 @@ The RStudio interface has a toolbar and four main panes:
 * The top right pane includes tabs such as Environment and History. The **Environment** tab allows you to see what objects are in the workspace.  The **History** tab allows you to see the commands that you have entered.
 * The bottom right pane shows tabs such as Plots, Packages and Help. **Plot** is where you can view your plot. **Packages** is where you can view the list of all the installed packages. In **Help**, you can can browse the built-in help system of R, which is super helpful.
 
-If you have questions after the workshop, a cheat sheet is available for quick referral: [RStudio IDE Cheat Sheet](https://posit.co/wp-content/uploads/2022/10/rstudio-ide-1.pdf). The cheat sheet is also accessible within RStudio through the toolbar 'Help - Cheat Sheets - RStudio IDE Cheat Sheet'.
+If you have questions after the workshop, a cheat sheet is available for quick referral: [RStudio IDE Cheat Sheet](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html). The cheat sheet is also accessible within RStudio through the toolbar 'Help - Cheat Sheets - RStudio IDE Cheat Sheet'.
 
 <p align="center">
 <img src="images/cheat_sheet.png" width="800" />
