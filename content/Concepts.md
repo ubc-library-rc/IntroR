@@ -8,70 +8,48 @@ has_toc: T
 
 # **Concepts and Basic Syntax**
 
-## 1. What Does Code Look Like in R?
+## 1. Basic R Operators and Functions
 
-**Example: R as a simple calculator**
+The most basic thing you can do in R is use it as a calculator. Just like a regular calculator, R can reconize arithmetic operators such as addition (+), subtraction (-), multiplication (*), and division (/). Type `?Arithmetic` into the console to read the R document in the help tab.
+
+**Example: R as a calculator**
 ``` r
-# R as a calculator
 2 + 2
 10 * 5
+12/3
+```
+R can also reconize logical operators which can be used to perform logical operations. Examples include: equality (==), inequality (!=), greater than (>), greater or equal to (>=).  Type `?base::Logic` into the console to read the R document in the help tab. 
+
+**Example: Comparing things**
+``` r
+78 < 100
+7 == 30 
+```
+
+R can use mathamatical functions. You can call a function by typing the function name followed by a set of parentheses. 
+
+**Example: Mathamatical functions**
+``` r
+#square root
 sqrt(16)
+
+#sin
+sin(6)
 ```
 
-**Example: Creating your first variable**
+In R, a **function** performs a specific task and can be called or executed by the user. Functions are an essential part of R programming because they allow you to automate tasks and reuse code. As a R user, you can rely on functions heavily.
+
+Functions normally require "arguments", which go inside the parentheses. The argument of the sqrt function is the number we want to calculate the square root of.
+
+Some functions have more then one argument, for example the round function.
+
+**Example: Rounding**
 ``` r
-my_age <- 33
-my_name <- "Demian"
+#The first argument is the number we want to round (66.66666)
+#The second argument is the number of decimal points (0)
+
+round(66.66666, 0)
 ```
-
----
-
-## 2. Operators
-
-In R, an operator is a special symbol or keyword used to perform operations on one or more values. There are several types of operators in R, including:
-
-### **Assignment Operators**: 
-These operators are used to assign a value to a variable. Examples include `<-` and `=`.
-
-``` r
-iris_dataframe = iris
-```
-<img src="images/iris_flowers.png" width="600" alt="Iris Flowers"/>
-  
-[Image Source: CodeSignal](https://codesignal.com/learn/courses/intro-to-unsupervised-machine-learning/lessons/exploring-and-visualizing-the-iris-dataset)
-
-
-### **Arithmetic Operators**: 
-These operators are used to perform basic mathematical operations such as addition (+), subtraction (-), multiplication (*), and division (/). Type `?Arithmetic` to read the R document in the help tab.
-
-### **Logical Operators**: 
-These operators are used to perform logical operations  Examples include: AND (&), OR (|), and NOT (!).  Type `?base::Logic` to read the R document in the help tab. 
-
-### **Comparison Operators**: 
-These operators are used to compare two values or variables and return a logical value of TRUE or FALSE. Examples include: less than (<), greater than (>), exactly equal to (==), and not equal to (!=)
-
-
-### **Miscellaneous Operators and Common Symbols**: 
-    -   the hash sign `#` indicates a comment in the code (tip ##### at the end of a comment creates a section that you can open and close as needed),
-    -   the colon sign `:` creates a sequence of numbers,
-    -   the square bracket `[]` indexes an object such as a vector,
-    -   the dollar sign `$` accesses a variable from a data frame (for example from the dataframe *mtcars*, access the *mpg* variable with *mtcars\$mpg*),
-    -   the percent sign `%` is used for special operators like modulo and in the tidyr package to string operations together,
-    -   and the double colon `::` used to access functions or variables from a specific package.
-
-Understanding how to use these different types of operators is important for writing efficient and effective code in R.
-
-## 3. Functions and Packages
-
-### Function
-
-When we calculate the sum of all the integers from 1 to 100, we use a formula to help simplify the calculation. What if we cannot memorize the formula? Does it mean that we have to sum those integers brute force by typing 1 + 2 + 3 + ... all the way up to 100? We can use a built-in function `sum()` with the colon operator `:`.
-
-``` r
-sum(1:100)
-```
-
-In R, a **function** is a block of code that performs a specific task and can be called or executed by the user. Functions are an essential part of R programming because they allow you to automate tasks and reuse code. As a R user, you can rely on functions heavily.
 
 When R is installed, it comes with a default package named `base`, which contains some **built-in functions** that you can use. For example,
 
@@ -80,53 +58,209 @@ When R is installed, it comes with a default package named `base`, which contain
 | `str()` \| Displays the structure of an R object
 | `table()` \| Creates a frequency table of a vector or factor
 | `plot()` \| Creates a basic plot of data
+---
 
-**Common functions in action:**
+Most functions that you might want to use in R will need to be installed from additional packages, we will discuss how to install packages at the end of this module. 
+
+## 2. Creating a Varible
+
+Variables are used in R to store information. Assignment operators (`<-` and `=`) are used to assign a value to a variable.
+
+**Example: Creating your first variable**
 ``` r
-# Descriptive statistics
-mean(iris$Sepal.Length)
-sd(iris$Sepal.Length)
-summary(iris$Sepal.Length)
-
-# Visualization
-plot(iris$Sepal.Length, iris$Sepal.Width)
+#we can assign a value of 7 to the a varible called x
+x <- 7
 ```
 
-#### Practice 1
+If we want to see what is stored in a variable we can run it in the console and R will print its value. Variables will also show up in the Environment tab in R-Studio.
 
-You're comparing coffee shops! Which has the best deal per cup?
-- Shop A: 12-pack of pods for $15
-- Shop B: 3 bags (each makes 10 cups) for $24  
-- Shop C: Single cups at $2.50 each
+Variables can be used to store the output of a mathamatical expression or a function:
+``` r
+y <- 1/3
 
-Use R to calculate the price per cup for each shop and rank them.
-
-<details markdown="block">
-<summary>Solution</summary>
-
-```r
-shop_a <- 15 / 12
-shop_b <- 24 / (3 * 10)
-shop_c <- 2.50
-
-# Compare
-shop_a  # $1.25 per cup
-shop_b  # $0.80 per cup
-shop_c  # $2.50 per cup
+z <- sqrt(16)
 ```
 
-Best deal: shop_b < shop_a < shop_c
+Varibles can also be used in a mathamatical expression or a function:
+``` r
+round(y, 2)
 
-</details>
+x + y
+```
+
+Varibles can be reassigned. R will only "remember" the most recent value assigned to a varible:
+``` r
+x #x is equal to 7
+x <- 6.5 #reassigning x 
+x #x is now equal to 6.5
+```
+
+---
+
+## 3. Data Types in R
+
+The information you store in a variable does not have to be numeric. You can store text in a variable, but it must be wrapped in quotation marks:
+
+**Example: Creating character varibles**
+``` r
+my_name <- "Emma"
+
+weekday <- "Thursday"
+```
+
+> [!TIP]
+> Variable names can not have spaces in them. Many R users will replace spaces with '_' in variable names.
+
+If we try and use the math opperators to add text variables together we get an error:
+``` r
+#this gives an error:
+my_name + weekday
+
+#so does this:
+my_name * 7
+```
+
+This is because weekday and my_name are not the right **data type** for mathamatical opperators. All data 
+in R has a type. We can use the class() function to discover what data type our varibles are.
+``` r
+class(x) 
+#numeric
+
+class(weekday) 
+#character
+```
+
+There are 5 **data types** in R:
+
+| `Numeric` \| Default numeric type, can be any real number (e.g. 0.5, pi, 45). Also called a Double.
+| `Interger` \| Exact whole numbers (e.g., 2, 566)
+| `Character` \| Represents text strings. Enclosed in quotes (e.g., "hello", 'world'). 
+| `Logical` \| Represents Boolean values (TRUE or FALSE).
+| `Complex` \| Used for numbers with imaginary components, you will probably not need to use this!
+
+The type of data that you have will determine what you can do. For example, you can not use mathematical functions on characters, that's why we got an error when we try and add weekday to my_name.
+
+**Example: Using functions with character varibles**
+
+When we tried to add two character varibles together, you might have expected R to concatenate the two words together. Although trying to stick two words together with the `+` will result in an error, we can "add" character strings together - we just need to use a function that works with character data.
+``` r
+last_name <- "Jones"
+
+#we can use the paste0 functions to "stick" character strings together:
+full_name <- paste0(my_name, " ", last_name)
+full_name
+```
+
+> [!TIP]
+> If you are getting errors when working with character varibles, the first thing to check is that all text is wrapped in quotation marks.
+
+## 4. Data Structuress in R
+
+### Vectors
+
+So far we have not done very much that we can't do quickly with a calculator, but what if we want to do something that is more difficult or annoying to calculate? For example, what if we want to add together every number between 525 and 779?
+
+Here we want to start by creating something called a vector. We can create a vector of every number between 525 and 779 using the ":" operator:
+
+``` r
+test_vector <- 525:779
+
+test_vector
+```
+
+A **vector** is a basic data structure that represents a sequence of values of *the same data type*. Vectors can be made of any data type, but all values in the vector must be the same type.
+
+> [!TIP]
+> If you want to create a set of information that inculdes more than one data type you can use a data structure in R called a list, but be aware that many functions and utilities of vectors will not work in the same way for lists.
+
+A vector can be created using the `c()` function, which combines values into a vector. 
+
+**Example: Creating vectors**
+``` r
+#We can create a vector of character data:
+list_of_countries <- c("France", "Egypt", "China", "Iran")
+
+#Numeric vectors do not have to be sequential or in ascending order:
+list_of_ages <- c(52, 23, 45, 77)
+```
+
+What if we want to grab one specific value something from a vector? What if we want to change one element in the vector?
+
+To access an element in a vector, you can use the operator `[]` and a number inside it indicating the position of the element. For example, to access the second element in `d`, the syntax is `d[2]`. We can use this indexing to pull out a vector value or to reassign it's value
+
+**Example: Indexing vectors**
+``` r
+colours <- c("green", "yellow", "blue", "red", "darkgreen")
+
+#we can look at the value in the 4th position of the vector
+colours[4]
+
+#we can change the value in the second position to "pink"
+colours[2] <- "pink"
+
+colours[2]
+```
+
+### Data frames
+
+A **data frame** is a two-dimensional tabular data structure that represents a rectangular grid of data, where each row represents an observation and each column represents a variable. Essentially, a data frame is several equal-length vectors - one for each column. The data in each column must be of the same type, while the data in each row can be different types.
+
+<img src="images/vector_dataframe.png" width="600" alt="Vectors vs Data Frames in R"/>
+
+[Image Source: Data Structures](https://zief0002.github.io/epsy-5261/01-03-data-structures-in-r.html)
 
 
-### Packages
+R comes with several **built-in data frames**. These data sets can be useful for learning and practicing data manipulation, analysis, and visualization techniques.
+
+These data sets can be accessed by name in R and can be loaded into memory using the `data()` function. 
+
+We will work woth the `iris` data frame, which contains measurements of the length and width of petals and sepals for three species of iris flowers (setosa, versicolor, and virginica). 
+
+<img src="images/iris_flowers.png" width="600" alt="Iris Flowers"/>
+  
+[Image Source: CodeSignal](https://codesignal.com/learn/courses/intro-to-unsupervised-machine-learning/lessons/exploring-and-visualizing-the-iris-dataset)
+
+**Example: Loading iris data frame**
+``` r
+data(iris)
+```
+
+To access an element in a data frame, you can use the operator `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and fourth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame with the `$` operator, for example, `iris$Sepal.Length` calls out the `Sepal.Length` variable from `iris` dataset.
+
+**Example: Subsetting iris data**
+``` r
+# Get one column
+iris$Sepal.Length
+
+# Get one row
+iris[1, ]
+
+# Get one cell
+iris[1, 4]
+
+# Get setosa species only
+setosa_only <- iris[iris$Species == "setosa", ]
+```
+
+Because each column of a data frame is a vector, we can use functions on columns in the dataframe just like we did on vectors.
+
+**Example: Function of data frame columns**
+``` r
+#calculate the mean petal width
+mean(iris$Petal.Width)
+
+#calculate the sum of petal width
+mean(iris$Petal.Width)
+```
+
+> [!TIP]
+> You can import **foreign data** into R data frames. The beginner-friendly way to do this is to import through the Import Dataset button under Environment on the top right pane.
+
+## 5. Packages
 
 As introduced earlier, R is powerful partially because it is extensible by installing additional packages quickly. In R, a **package** is a collection of functions, data, and documentation.
 
 Packages can be installed using the `install.packages()` function, which downloads the package from a repository (usually cran) and installs it on your system. Once a package is installed, its functions and data can be loaded into the R environment using the `library()` function. You **do not need to install a package repeatedly, but you do need to library it again in order to use it every time when you restart the RStudio.** If you want to use a function from a package without library(), you can use the double colon operator, for example, `dplyr::filter()`, where `dplyr` is the package name, and `filter()` is a function from the package.
-
-#### Practice 2
 
 The `tidyverse` is a collection of popular R packages for data manipulation and visualization. Use the following commands to install and load the `tidyverse` package:
 
@@ -134,19 +268,6 @@ The `tidyverse` is a collection of popular R packages for data manipulation and 
 ``` r
 install.packages("tidyverse") # Install package
 library(tidyverse) # Load package
-```
-
-Let's subset the iris_dataframe to test the capabilities of the tidyverse package. Let's keep the setosa species with a sepal length below 5, add a new Sepal Ratio column (length ÷ width), select the columns of interest, and arrange the rows from smallest to largest ratio.
-
-``` r
-# Take iris, THEN filter, THEN add a new column, THEN pick columns, THEN sort.
-
-s_below5 <- iris_dataframe %>%
-  filter(Species == "setosa", Sepal.Length < 5) %>%      # keep small setosa flowers
-  mutate(Sepal.Ratio = round(Sepal.Length / Sepal.Width, 2)) %>%  # create a new variable
-  select(Species, Sepal.Length, Sepal.Width, Sepal.Ratio) %>%     # keep columns we care about
-  arrange(Sepal.Ratio)                                  # sort smallest Ratio
-s_below5
 ```
 
 <details>
@@ -172,92 +293,19 @@ s_below5
 <img src="images/load_package3.png" style="margin-left:1px; margin-bottom:10px"/>
 :::
 
-</details>
-
-## 4. Data Type, Vector, and Data Frame
-
-### Data Types
-
-In R, there are several **data types** that are commonly used, including
-
-| `Numeric` \| Represents numbers with decimal points. Can be either integers (e.g., 3, 7) or double/floating-point numbers (e.g., 3.14, 2.5e-3). 
-| `Character` \| Represents text strings. Enclosed in quotes (e.g., "hello", 'world'). 
-| `Factor` \| Represents categorical data with a fixed set of possible values or levels (e.g., "cactus", "orchid").
-| `Logical` \| Represents Boolean values (TRUE or FALSE) or logical values (NA, NULL)
-
-Each data type has its own properties and functions that can be used to manipulate and analyze data. Data type is an important concept in R because it affects how the data is stored, processed, and analyzed. Choosing the appropriate data type can help you optimize your memory usage, perform the necessary data manipulations, conduct the appropriate statistical analyses, and create effective visualizations of your data.
-
-### Vector
-
-A **vector** is a basic data structure that represents a sequence of values of *the same data type*. A vector can be created using the `c()` function, which combines values into a vector. For example, to create a vector base on `Amsterdam`, `Kenya` and `England`, you can use the following code:
-
+**Example: Welcome to the Tidyverse**
+Let's subset the iris data frame to test the capabilities of the tidyverse package. Let's keep the setosa species with a sepal length below 5, add a new Sepal Ratio column (length ÷ width), select the columns of interest, and arrange the rows from smallest to largest ratio.
 
 ``` r
-d <- c("Amsterdam", "Kenya", "England") # create a vector
+# Take iris, THEN filter, THEN add a new column, THEN pick columns, THEN sort.
+
+s_below5 <- iris_dataframe %>%
+  filter(Species == "setosa", Sepal.Length < 5) %>%      # keep small setosa flowers
+  mutate(Sepal.Ratio = round(Sepal.Length / Sepal.Width, 2)) %>%  # create a new variable
+  select(Species, Sepal.Length, Sepal.Width, Sepal.Ratio) %>%     # keep columns we care about
+  arrange(Sepal.Ratio)                                  # sort smallest Ratio
+s_below5
 ```
-
-To access an element in a vector, you can use the operator `[]` and a number inside it indicating the position of the element. For example, to access the second element in `d`, the syntax is `d[2]`.
-
-**Example: Track your weekly coffee spending**
-``` r
-# Individual days
-monday_coffee <- 5.50
-tuesday_coffee <- 4.25
-wednesday_coffee <- 6.00
-
-# Better: use a vector!
-weekly_coffee <- c(5.50, 4.25, 6.00, 5.50, 7.00, 0, 8.50)
-
-# Calculate total and average
-sum(weekly_coffee)
-mean(weekly_coffee)
-```
-
-**Why vectors matter:** 
-- Store related data together
-- Perform calculations on entire dataset
-- Foundation for data frames
-
-*Note:* the `c()` function is also used to make lists. This is important for lots of things in R including storing a list of colors to use for plots or keeping a list of objects (e.g. DNA sequences) to subset a dataframe by.
-
-### Data Frame
-
-A **data frame** is a two-dimensional tabular data structure that represents a rectangular grid of data, where each row represents an observation and each column represents a variable. Essentially, a data frame is several equal-length vectors - one for each column. The data in each column must be of the same type, while the data in each row can be different types.
-
-<img src="images/vector_dataframe.png" width="600" alt="Vectors vs Data Frames in R"/>
-
-[Image Source: Data Structures](https://zief0002.github.io/epsy-5261/01-03-data-structures-in-r.html)
-
-
-R comes with several **built-in data frames**. These data sets can be useful for learning and practicing data manipulation, analysis, and visualization techniques. To name a few,
-
-| `iris` \| A data frame containing measurements of the length and width of petals and sepals for three species of iris flowers (setosa, versicolor, and virginica).
-| `mtcars` \| A data frame containing information about 32 automobiles, including miles per gallon (mpg), horsepower (hp), and other variables related to performance and design.
-| `airquality` \| A data frame containing daily measurements of air quality in New York City in the summer of 1973, including measurements of ozone, particulate matter, and other pollutants.
-| `ChickWeight` \| A data frame containing information on the weight of chickens over time, along with details on diet, gender, and other factors that may impact growth.
-| `CO2` \| A data frame containing measurements of carbon dioxide uptake in plants, along with information on factors such as light intensity, temperature, and humidity.
-
-These data sets can be accessed by name in R and can be loaded into memory using the `data()` function. For example, to load the `iris` data frame into memory, you can use `data(iris)`.
-
-To access an element in a data frame, you can use the operator `[]` and two numbers inside it indicating the row and column position of the element. For example, to access the element in the second row and fourth column in `iris`, the syntax is `iris[2, 4]`. You can also access a variable in a data frame with the `$` operator, for example, `iris$Sepal.Length` calls out the `Sepal.Length` variable from `iris` dataset.
-
-
-**Simple subsetting:**
-``` r
-# Get one column
-iris$Sepal.Length
-
-# Get one row
-iris[1, ]
-
-# Get one cell
-iris[1, 4]
-
-# Get setosa species only
-setosa_only <- iris[iris$Species == "setosa", ]
-```
-
-You can import **foreign data** into R as well. The beginners-friendly way is to import through the Import Dataset button under Environment on the top right pane.
 
 ## 5. Some Tips and Tricks
 
