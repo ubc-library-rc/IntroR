@@ -8,6 +8,8 @@ has_toc: T
 
 # **Concepts and Basic Syntax**
 
+An R script you can use to follow-along with this lesson can be downloaded [here](https://github.com/ubc-library-rc/IntroR/blob/main/scripts/Intro_R_Script_Blank.R).
+
 ## 1. Basic R Operators and Functions
 
 The most basic thing you can do in R is use it as a calculator. Just like a regular calculator, R can reconize arithmetic operators such as addition (+), subtraction (-), multiplication (*), and division (/). Type `?Arithmetic` into the console to read the R document in the help tab.
