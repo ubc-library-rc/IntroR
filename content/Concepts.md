@@ -62,7 +62,7 @@ When R is installed, it comes with a default package named `base`, which contain
 
 Most functions that you might want to use in R will need to be installed from additional packages, we will discuss how to install packages at the end of this module. 
 
-## 2. Creating a Varible
+## 2. Creating a Variable
 
 Variables are used in R to store information. Assignment operators (`<-` and `=`) are used to assign a value to a variable.
 
@@ -81,14 +81,14 @@ y <- 1/3
 z <- sqrt(16)
 ```
 
-Varibles can also be used in a mathamatical expression or a function:
+Variables can also be used in a mathematical expression or a function:
 ``` r
 round(y, 2)
 
 x + y
 ```
 
-Varibles can be reassigned. R will only "remember" the most recent value assigned to a varible:
+Variables can be reassigned. R will only "remember" the most recent value assigned to a variable:
 ``` r
 x #x is equal to 7
 x <- 6.5 #reassigning x 
@@ -121,7 +121,7 @@ my_name * 7
 ```
 
 This is because weekday and my_name are not the right **data type** for mathamatical opperators. All data 
-in R has a type. We can use the class() function to discover what data type our varibles are.
+in R has a type. We can use the class() function to discover what data type our variables are.
 ``` r
 class(x) 
 #numeric
@@ -142,7 +142,7 @@ The type of data that you have will determine what you can do. For example, you 
 
 **Example: Using functions with character varibles**
 
-When we tried to add two character varibles together, you might have expected R to concatenate the two words together. Although trying to stick two words together with the `+` will result in an error, we can "add" character strings together - we just need to use a function that works with character data.
+When we tried to add two character variables together, you might have expected R to concatenate the two words together. Although trying to stick two words together with the `+` will result in an error, we can "add" character strings together - we just need to use a function that works with character data.
 ``` r
 last_name <- "Jones"
 
@@ -152,7 +152,7 @@ full_name
 ```
 
 > [!TIP]
-> If you are getting errors when working with character varibles, the first thing to check is that all text is wrapped in quotation marks.
+> If you are getting errors when working with character variables, the first thing to check is that all text is wrapped in quotation marks.
 
 ## 4. Data Structuress in R
 
