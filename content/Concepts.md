@@ -8,7 +8,7 @@ has_toc: T
 
 # **Concepts and Basic Syntax**
 
-An R script you can use to follow-along with this lesson can be downloaded [here](https://github.com/ubc-library-rc/IntroR/blob/main/scripts/Intro_R_Script_Blank.R).
+An R script you can use to follow-along with this lesson can be downloaded [here](https://ubc-library-rc.github.io/IntroR/scripts/Intro_R_Script_Blank.R).
 
 ## 1. Basic R Operators and Functions
 
