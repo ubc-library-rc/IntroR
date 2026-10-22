@@ -53,14 +53,13 @@ Some functions have more then one argument, for example the round function.
 round(66.66666, 0)
 ```
 
-When R is installed, it comes with a default package named `base`, which contains some **built-in functions** that you can use. For example,
+When R is installed, it comes with a default package named `base`, which contains some **built-in functions** that you can use. For example:
 
-| `mean()` \| Calculates the arithmetic mean of a vector of numbers
-| `sd()` \| Calculates the standard deviation of a vector of numbers
-| `str()` \| Displays the structure of an R object
-| `table()` \| Creates a frequency table of a vector or factor
-| `plot()` \| Creates a basic plot of data
----
+| `mean()` \| Calculates the arithmetic mean of a vector of numbers.
+| `sd()` \| Calculates the standard deviation of a vector of numbers.
+| `str()` \| Displays the structure of an R object.
+| `table()` \| Creates a frequency table of a vector or factor.
+| `plot()` \| Creates a basic plot of data.
 
 Most functions that you might want to use in R will need to be installed from additional packages, we will discuss how to install packages at the end of this module. 
 
@@ -110,8 +109,8 @@ my_name <- "Emma"
 weekday <- "Thursday"
 ```
 
-> [!TIP]
-> Variable names can not have spaces in them. Many R users will replace spaces with '_' in variable names.
+>**TIP:**
+>Variable names can not have spaces in them. Many R users will replace spaces with '_' in variable names.
 
 If we try and use the math opperators to add text variables together we get an error:
 ``` r
@@ -153,10 +152,10 @@ full_name <- paste0(my_name, " ", last_name)
 full_name
 ```
 
-> [!TIP]
+> **TIP:**
 > If you are getting errors when working with character variables, the first thing to check is that all text is wrapped in quotation marks.
 
-## 4. Data Structuress in R
+## 4. Data Structures in R
 
 ### Vectors
 
@@ -172,7 +171,7 @@ test_vector
 
 A **vector** is a basic data structure that represents a sequence of values of *the same data type*. Vectors can be made of any data type, but all values in the vector must be the same type.
 
-> [!TIP]
+> **TIP:**
 > If you want to create a set of information that inculdes more than one data type you can use a data structure in R called a list, but be aware that many functions and utilities of vectors will not work in the same way for lists.
 
 A vector can be created using the `c()` function, which combines values into a vector. 
@@ -255,7 +254,7 @@ mean(iris$Petal.Width)
 mean(iris$Petal.Width)
 ```
 
-> [!TIP]
+> **TIP:**
 > You can import **foreign data** into R data frames. The beginner-friendly way to do this is to import through the Import Dataset button under Environment on the top right pane.
 
 ## 5. Packages
